@@ -9,5 +9,34 @@
             <from-outcome>index</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>localData</from-outcome>
+            <to-view-id>/localData.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>escolherGrupo</from-outcome>
+            <to-view-id>/escolherGrupo.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>protecao</from-outcome>
+            <to-view-id>/protecao.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>resumo</from-outcome>
+            <to-view-id>/resumo.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>listagemProdutos</from-outcome>
+            <to-view-id>/listagemProdutos.xhtml</to-view-id>
+        </navigation-case>
+        
+         
+        
+         
     </navigation-rule>
 </faces-config>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/menuStyle.css" />
+        <h:outputScript name="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" />
+        <h:outputScript name="js/bootstrap.min.js" />
+    </h:head>
+    <h:body>
+
+        <header class="row">
+
+            <nav class="col-md-12 menuNav">
+
+                <nav class="navbar navbar-inverse" >
+
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#" id="retorno">LoCarFácil</a>
+
+                        </div>
+                        <!--Menu Normal-->	
+                        <div class="menuNavNormal">
+                            <ul class="nav navbar-nav" >
+                                <li><a href="protecao.html">Alugue um Carro</a></li>
+                                <li><a href="#">Minha Área</a></li>
+                                <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
+                                <li><a href="#">Pesquisar Lojas</a></li>
+                                <li><a href="#">Devolver Aluguel</a></li> 							
+
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                        </div>
+                        <!--Menu Small-->	
+                        <div class="btn-group menuNavSmall">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="protecao.html">Alugue um Carro</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Minha Área</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Pesquisar Lojas</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Devolver Aluguel</a></li>		
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+
+            </nav>
+        </header>
+
+    </h:body>
+</html>
+

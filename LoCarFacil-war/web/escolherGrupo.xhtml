@@ -1,0 +1,595 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>Escolher Grupo de Automóveis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/escolherGrupoStyle.css" />
+        <h:outputScript name="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" />
+        <h:outputScript name="js/bootstrap.min.js" />
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <header class="row">
+
+                <nav class="col-md-12 menuNav">
+
+                    <nav class="navbar navbar-inverse" >
+
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#" id="retorno">LoCarFácil</a>
+
+                            </div>
+                            <!--Menu Normal-->	
+                            <div class="menuNavNormal">
+                                <ul class="nav navbar-nav" >
+                                    <li><a href="protecao.html">Alugue um Carro</a></li>
+                                    <li><a href="#">Minha Área</a></li>
+                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
+                                    <li><a href="#">Pesquisar Lojas</a></li>
+                                    <li><a href="#">Devolver Aluguel</a></li> 							
+
+                                </ul>
+
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+                            <!--Menu Small-->	
+                            <div class="btn-group menuNavSmall">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="protecao.html">Alugue um Carro</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Minha Área</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Pesquisar Lojas</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Devolver Aluguel</a></li>		
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
+
+                </nav>
+            </header>
+            <!--Aqui fica projeção da locação-->
+
+            <div class="container">	
+
+                <div class="row projecaoCor">
+
+                    <div class="col-md-3 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number1Preto.png" alt="Passo 1"/> Local e Data</p>
+                    </div>
+
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <p class="projecao local"><img src="resources/imagens/number2Branco.png" alt="Passo 2"/> Escolher Grupo</p>
+                    </div>
+
+                    <div class="col-md-3 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number3Preto.png" alt="Passo 3"/> Proteção e Acessórios</p>
+                    </div>
+
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number4Preto.png" alt="Passo 4"/> Indentificação</p>
+                    </div>
+
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number5Preto.png" alt="Passo 5"/> Resumo</p>
+                    </div>
+
+                </div>
+
+                <!--Aqui inicia a parte section -->
+                <div class="row t">
+
+                    <section class="col-md-8 col-sm-12 col-xs-12">
+
+                        <h1>Escolher Grupo </h1>
+
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 botoesEsq">
+                                <p:commandButton id="btSupEs" class="btn btn-primary" action="#{aluguelBean.localData()}" value="Voltar" ajax="false "/>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 botoesDir">
+                                <p:commandButton id="btSupDir" class="btn btn-primary" action="#{aluguelBean.protecao()}" value="Próximo" ajax="false "/>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoA.png" alt="grupo A - Econômico" title="Grupo A - Econômico"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo A - Econômico</h4>
+                                        <p>Fiat Novo Uno 1.0 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 2 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 2 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 50,90</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('A - Econômico',50.90)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoB.png" alt="grupo B - Econômico com Ar" title="Grupo B - Econômico com Ar"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo B - Econômico com Ar</h4>
+                                        <p>Chevrolet Onix 1.0 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 3 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 61,15</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('B - Econômico com Ar',61.15)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoC.png" alt="grupo C - Econômico Plus" title="Grupo C - Econômico Plus"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo C - Econômico Plus</h4>
+                                        <p>Nissan New March 1.0 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 2 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 65,66</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('C - Econômico Plus',65.66)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoD.png" alt="grupo D - Intermediário" title="Grupo D - Intermediário"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo D - Intermediário</h4>
+                                        <p>Ford Focus Hatch 1.6 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 3 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 77,26</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('D - Intermediário',77.26)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoE.png" alt="grupo E - Intermediário Plus" title="Grupo E - Intermediário Plus"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo E - Intermediário Plus</h4>
+                                        <p>Ford Fusion Hybrid 2.0 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 4 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+                                        <img src="resources/imagens/Travas-azul.png" alt="Travas" title="Travas-Eletricas"/> | 
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 99,41</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('E - Intermediário Plus',99.41)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoF.png" alt="grupo F - Intermediário Automático " title="Grupo F - Intermediário Automático"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo F - Intermediário Auto</h4>
+                                        <p>Novo HB20S 1.6 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 3 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+                                        <img src="resources/imagens/Travas-azul.png" alt="Travas" title="Travas-Eletricas"/> | 
+                                        <img src="resources/imagens/Automatico-azul.png" alt="Automático" title="Automático"/> | 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 108,51</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('F - Intermediário Auto',108.51)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoG.png" alt="grupo G - Executivo Especial" title="Grupo G - Executivo Especial"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo G - Executivo Especial</h4>
+                                        <p>Renault Fluence Dynamique 2.0 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 4 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+                                        <img src="resources/imagens/Travas-azul.png" alt="Travas" title="Travas-Eletricas"/> | 
+                                        <img src="resources/imagens/Automatico-azul.png" alt="Automático" title="Automático"/> | 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 140,48</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('G - Executivo Especial',140.48)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoH.png" alt="grupo H - Executivo Luxo" title="Grupo H - Executivo Luxo"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo H - Executivo Luxo</h4>
+                                        <p>Renault Fluence Dynamique 2.0 ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 4 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+                                        <img src="resources/imagens/Travas-azul.png" alt="Travas" title="Travas-Eletricas"/> | 
+                                        <img src="resources/imagens/Automatico-azul.png" alt="Automático" title="Automático"/> | 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 179,78</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('H - Executivo Luxo',179.78)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+
+                        <div class="row linhaEscolha">
+
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/grupoI.png" alt="grupo I - LoCarFácil Prime" title="Grupo I - LoCarFácil Prime"/>
+                                    <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <h4>Grupo I - LoCarFácil Prime</h4>
+                                        <p>BMW 320i ou similar</p>
+                                        <img src="resources/imagens/Ocupantes-azul.png" alt="Ocupantes" title="Ocupantes"/> 5 | 
+                                        <img src="resources/imagens/Portas-azul.png" alt="Portas" title="Portas"/> 4 | 
+                                        <img src="resources/imagens/Bagagem-azul.png" alt="Bagagem" title="Bagagem"/> 4 | 
+                                        <img src="resources/imagens/ABS-azul.png" alt="ABS" title="ABS"/> | 
+                                        <img src="resources/imagens/Air-Bag-azul.png" alt="Air-Bag" title="Air-Bag"/> |
+                                        <img src="resources/imagens/Ar-azul.png" alt="Ar" title="Ar-Condicionado"/> | 
+                                        <img src="resources/imagens/Direcao-azul.png" alt="Direcao" title="Direção-Hidráulica"/> | 
+                                        <img src="resources/imagens/Travas-azul.png" alt="Travas" title="Travas-Eletricas"/> | 
+                                        <img src="resources/imagens/Automatico-azul.png" alt="Automático" title="Automático"/> | 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="thumbnail">
+
+                                    <div class="caption">
+                                        <p class="DiariaLivre">Diária com KM livre</p>
+                                        <p class="precoSection"><sup>R$</sup> 288,91</p>
+                                        <!--<p><a href="#" class="btn btn-primary" role="button">Selecione</a></p>-->
+                                        <p:commandButton action="#{aluguelBean.carroSelecionado('I - LoCarFácil Prime',288.91)}" class="btn btn-primary" value="Selecione"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 botoesEsq">
+                                <p:commandButton id="btInfeEs" class="btn btn-primary" action="#{aluguelBean.localData()}" value="Voltar" ajax="false "/>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 botoesDir">
+                                <!--<p><a href="protecao.html"  id="btInfeDir" class="btn btn-primary" role="button">Proximo <span class="glyphicon glyphicon-menu-right"></span></a></p>-->
+                                <p:commandButton id="btInfeDir" class="btn btn-primary" action="#{aluguelBean.protecao()}" value="Próximo" ajax="false "/>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!--Parte Lateral-->
+                    <aside class="col-md-4 col-sm-12 col-xs-12">
+                        <h1>Resumo da Reserva</h1>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="2">Localidade</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Grupo</td> 
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.grupo}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Diária</td> 
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorGrupo}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda"><h:outputLabel value="#{aluguelBean.aluguel.dias}"/> dia(s)</td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valTotalGrupo}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Retirada</td> 
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.localizacaoRetirada}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Devolução</td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.localizacaoDevolucao}"/></td>
+                            </tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="3">Data e Hora</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Retira</td> 
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataRetirada}">
+                                        <f:convertDateTime locale="pt-BR" 
+                                                           pattern="dd/MM/yyyy" /></h:outputLabel></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaRetirada}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Devolução</td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataDevolucao}">
+                                        <f:convertDateTime locale="pt-BR" 
+                                                           pattern="dd/MM/yyyy" /></h:outputLabel></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaDevolucao}"/></td>
+                            </tr>
+                        </table>
+
+                    </aside>
+
+                </div>
+
+
+            </div>
+            <!--Inicio do Rodape-->
+            <footer class="row">
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Fale.png" alt="Fale Conosco" title="Fale Conosco"/></a>
+                    <div class="caption">
+                        <a href="#"><h3 id="fale">Fale Conosco</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Central.png" alt="Central de Resevas" title="Central de Resevas"/></a>
+                    <div class="caption">
+                        <a href="#"><h3>Central de Resevas</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Perguntas.png" alt="Perguntas Frequentes" title="Perguntas Frequentes"/></a>
+                    <div class="caption">
+                        <a href="#"><h3>Perguntas Frequentes</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Assistência.png" alt="Assistência Tecnica" title="Assistência Tecnica"/></a>
+                    <div class="caption">
+                        <a href="#"><h3>Assistência Tecnica</h3></a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="voltarTopo">
+                        <p><a href="#retorno">Voltar ao Topo <span class="glyphicon glyphicon-menu-up" ></span></a></p>
+                    </div>
+                </div>
+
+            </footer>
+        </h:form>
+    </h:body>
+    <ui:fragment rendered="#{flash.mensagem != null}">
+        <script>
+            alert("Favor escolher um grupo de veículos!");
+        </script>
+    </ui:fragment>
+</html>
+

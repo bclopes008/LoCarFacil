@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>Resumo da Reserva</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/resumoStyle.css" />
+        <h:outputScript name="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" />
+        <h:outputScript name="js/bootstrap.min.js" />
+
+
+    </h:head>
+    <h:body>
+        <h:form>
+            <header class="row">
+
+                <nav class="col-md-12 menuNav">
+
+                    <nav class="navbar navbar-inverse" >
+
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#" id="retorno">LoCarFácil</a>
+
+                            </div>
+                            <!--Menu Normal-->	
+                            <div class="menuNavNormal">
+                                <ul class="nav navbar-nav" >
+                                    <li><a href="#">Alugue um Carro</a></li>
+                                    <li><a href="#">Minha Área</a></li>
+                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
+                                    <li><a href="#">Pesquisar Lojas</a></li>
+                                    <li><a href="#">Devolver Aluguel</a></li> 							
+
+                                </ul>
+
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+                            <!--Menu Small-->	
+                            <div class="btn-group menuNavSmall">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="protecao.html">Alugue um Carro</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Minha Área</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Pesquisar Lojas</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Devolver Aluguel</a></li>		
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
+
+                </nav>
+            </header>
+
+            <!--Aqui fica projeção da locação-->
+
+            <div class="container">	
+
+                <div class="row projecaoCor">
+
+                    <div class="col-md-3 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number1Preto.png" alt="Passo 1"/> Local e Data</p>
+                    </div>
+
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number2Preto.png" alt="Passo 2"/> Escolher Grupo</p>
+                    </div>
+
+                    <div class="col-md-3 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number3Preto.png" alt="Passo 3"/> Proteção e Acessórios</p>
+                    </div>
+
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <p class="projecao"><img src="resources/imagens/number4Preto.png" alt="Passo 4"/> Indentificação</p>
+                    </div>
+
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <p class="projecao local"><img src="resources/imagens/number5Branco.png" alt="Passo 5"/> Resumo</p>
+                    </div>
+
+                </div>
+
+                <!--Aqui inicia a parte section -->
+                <div class="row t">
+
+                    <section class="col-md-8 col-sm-12 col-xs-12">
+
+                        <h1 class="cabPrincipalSection">Reserva da Locação</h1>
+
+                        <h1 id="prezadoCliente">Prezado(a): Fulano de Tall</h1>
+                        <hr/>
+
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <p>Reserva efetuada com sucesso!</p>
+                                <p>Por favor anote o número de sua reserva:</p>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h1 id="numeroReserva"><h:outputLabel value="#{aluguelBean.aluguel.id}"/></h1>
+                            </div>
+
+                        </div>
+
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <table>
+                                    <tr>
+                                        <td><h3>Dados Pessoais</h3></td>
+                                    </tr>
+                                    <tr><td>CPF:</td> <td>12345678990</td></tr>
+                                    <tr><td>Nome:</td> <td>Fulano de Tall</td></tr>
+                                    <tr><td>E-mail:</td> <td>fulanodetall@hotmail.com</td></tr>
+                                    <tr><td>Telefone:</td> <td>(11)98877-4455</td></tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+
+                                <table>
+                                    <tr>
+                                        <td><h3>Dados da Retirada</h3></td><td>Como chegar</td>
+                                    </tr>
+                                    <tr><td>Local:</td> <td><h:outputLabel value="#{aluguelBean.aluguel.localizacaoRetirada}"/></td></tr>
+                                    <tr><td>Endereço:</td> <td>Avenida Washington Luis, 7059 a</td></tr>
+                                    <tr><td>Data:</td> <td><h:outputLabel value="#{aluguelBean.aluguel.dataRetirada}">
+                                                <f:convertDateTime locale="pt-BR" 
+                                                                   pattern="dd/MM/yyyy" /></h:outputLabel></td></tr>
+                                    <tr><td>Hora:</td> <td><h:outputLabel value="#{aluguelBean.aluguel.horaRetirada}"/></td></tr>
+
+                                </table>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <table>
+                                    <tr>
+                                        <td><h3>Dados da Devolução</h3></td><td>Como chegar</td>
+                                    </tr>
+                                    <tr><td>Local:</td> <td><h:outputLabel value="#{aluguelBean.aluguel.localizacaoDevolucao}"/></td></tr>
+                                    <tr><td>Endereço:</td> <td>Avenida Washington alves natel, 5079 a</td></tr>
+                                    <tr><td>Data:</td> <td><h:outputLabel value="#{aluguelBean.aluguel.dataDevolucao}">
+                                                <f:convertDateTime locale="pt-BR" 
+                                                                   pattern="dd/MM/yyyy" /></h:outputLabel></td></tr>
+                                    <tr><td>Hora:</td> <td><h:outputLabel value="#{aluguelBean.aluguel.horaDevolucao}"/></td></tr>
+
+                                </table>
+                            </div>
+
+                        </div><br/><br/><br/><br/><br/><br/><!--aqui vou estilizar depois-->
+
+                        <div class="row">
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+
+
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/alterar-reserva.png" alt="Alterar Reserva" title=""/>
+                                    <p>Alterar Reserva</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/excluir-reserva.png" alt="Excluir Reserva" title=""/>
+                                    <p>Excluir Reserva</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/imprimir-reserva.png" alt="Imprimir Reserva" title=""/>
+                                    <p>Imprimir Reserva</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="thumbnail">
+                                    <img src="resources/imagens/nova-reserva.png" alt="Nova Reserva" title=""/>
+                                    <p>Nova Reserva</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6 col-xs-6 botoesEsq">
+                                <p:commandButton id="btInfeEs" class="btn btn-primary" action="#{aluguelBean.novaReserva()}" value="Nova Reserva" ajax="false "/>
+                            </div>
+
+                        </div>
+
+
+
+                    </section>
+                    <!--Parte Lateral-->
+                    <aside class="col-md-4 col-sm-12 col-xs-12">
+                        <h1 class="cabPrincipalAside">Resumo da Reserva</h1>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="thumbnail">
+                                <img src="resources/imagens/grupoA.png" alt="grupo A - Econômico" title="Grupo A - Econômico"/>
+                                <p class="infoIlustrativa">Imagem Ilustrativa</p>
+                                <div class="caption">
+                                    <h3><h:outputLabel value="#{aluguelBean.aluguel.grupo}"/></h3>
+                                    <p>Fiat Novo Uno 1.0 ou similar</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <table class="tab" id="marg">
+                            <tr><td class="cab" colspan="2">Resumo dos Valores - Preço Estimado</td></tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="2">Diária</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Diária</td> 
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorGrupo}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda"><h:outputLabel value="#{aluguelBean.aluguel.dias}"/> dia(s)</td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valTotalGrupo}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="2">Proteções</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Sem Proteçao</td> 
+                                <td class="tds tdDireita">R$00,00</td>
+                            </tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="2">Acessórios</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">GPS</td> 
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Qtd. <h:outputLabel value="#{aluguelBean.aluguel.qtdGps}"/></td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorGps}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Bebê Conforto</td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Qtd. <h:outputLabel value="#{aluguelBean.aluguel.bbConf}"/></td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorBbConf}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Assento Elevado</td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Qtd. <h:outputLabel value="#{aluguelBean.aluguel.assElev}"/></td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorAssElev}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Cadeira de Bebê</td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Qtd. <h:outputLabel value="#{aluguelBean.aluguel.cadBB}"/></td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorCadBB}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="2">Valor Total</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Total</td>
+                                <td class="tds tdDireita"><h:outputText value="#{aluguelBean.aluguel.valorTotal}">
+                                        <f:convertNumber type="currency" locale="pt-BR" />
+                                    </h:outputText></td>
+                            </tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="2">Localidade</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Retira</td> 
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.localizacaoRetirada}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Devolução</td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.localizacaoDevolucao}"/></td>
+                            </tr>
+                        </table>
+
+                        <table class="tab">
+                            <tr><td class="cab" colspan="3">Data e Hora</td></tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Retira</td> 
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataRetirada}">
+                                        <f:convertDateTime locale="pt-BR" 
+                                                           pattern="dd/MM/yyyy" /></h:outputLabel></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaRetirada}"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tds tdEsquerda">Devolução</td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataDevolucao}">
+                                        <f:convertDateTime locale="pt-BR" 
+                                                           pattern="dd/MM/yyyy" /></h:outputLabel></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaDevolucao}"/></td>
+                            </tr>
+                        </table>
+
+                    </aside>
+
+                </div>
+
+            </div>
+            <!--Inicio do Rodape-->
+            <footer class="row">
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Fale.png" alt="Fale Conosco" title="Fale Conosco"/></a>
+                    <div class="caption">
+                        <a href="#"><h3 id="fale">Fale Conosco</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Central.png" alt="Central de Resevas" title="Central de Resevas"/></a>
+                    <div class="caption">
+                        <a href="#"><h3>Central de Resevas</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Perguntas.png" alt="Perguntas Frequentes" title="Perguntas Frequentes"/></a>
+                    <div class="caption">
+                        <a href="#"><h3>Perguntas Frequentes</h3></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-8">
+                    <a href="#"><img src="resources/imagens/Assistência.png" alt="Assistência Tecnica" title="Assistência Tecnica"/></a>
+                    <div class="caption">
+                        <a href="#"><h3>Assistência Tecnica</h3></a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="voltarTopo">
+                        <p><a href="#retorno">Voltar ao Topo <span class="glyphicon glyphicon-menu-up" ></span></a></p>
+                    </div>
+                </div>
+
+            </footer>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,360 @@
+/* 
+    Created on : 13/05/2016, 20:18:09
+    Author     : fabio.ssantos13
+*/
+
+@charset "UTF-8";
+/*Inicio do Menu*/
+.menuNav{
+	background-color:#0047b3;
+	border:1px solid black;
+	border-radius:0px 0px 8px 8px;
+	margin-bottom:20px;
+}
+.navbar-inverse{
+	background-color: #0047b3;
+	border:0;
+}
+
+.navbar-inverse .navbar-nav >li > a {
+	color:white;
+	padding-top:30px;
+	padding-right:30px;
+	font-size:20px;
+}
+.navbar-inverse .navbar-nav >li > a:hover{
+	color:yellow;
+
+}
+.navbar-inverse .navbar-brand{
+	font-size:28px;
+	margin:20px;
+	color:yellow;
+}
+/*Menu Small*/
+div .menuNavSmall{
+	position:relative;
+	top:20px;
+	left:0;
+	padding-left:20px;
+	display:none;
+}
+div .menuNavSmall button{
+	background-color:#0047b3;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	border:1px solid white;
+	transition: 0.5s;
+}
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    background-color:#0047b3;
+    border-color:white;
+	color:white;
+	
+}
+.btn-default.active, .btn-default:focus, .open>.dropdown-toggle.btn-default {
+	background-color:#0047b3;
+    border-color:white;
+	color:white;
+	
+}
+.open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    background-color:#0047b3;
+    border-color:white;
+	color:white;
+}
+
+div .menuNavSmall ul{
+	background-color:#0047b3;
+}
+
+div .menuNavSmall ul li a{
+	color:white;
+	font-size:20px;
+}
+div .menuNavSmall ul li a:hover{
+	background-color:#ECECEC;
+}
+
+@media(max-width:992px){
+.menuNavNormal{
+	display:none;
+}
+div .menuNavSmall{
+	display:inline-block;
+}
+	
+}
+@media(max-width:768px){
+div .menuNavSmall{
+	position:relative;
+	top:0px;
+	padding-left:20px;
+	display:inline-block;
+}
+}
+/*Fim do Menu-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Inicio da row Projeção da locação*/
+div.projecaoCor{
+	background-color:#80b3ff;
+	margin:0px;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius:4px;
+}
+p.projecao{
+	font-size:16px;
+	text-align:center;
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-weight:bolder;
+	
+}
+div p.local{
+	background-color: #0047b3;
+	color:white;
+	height:auto;
+}
+/*Fim da row Projeção da locação*/
+
+/*Inicio dos Cabeçalhos */
+section h1{
+	background-color:#7e7e7e;
+	position:relative;
+	top:-30px;
+	margin-left:-10px;
+	margin-right:-10px;
+	font-size:22px;
+	text-align:center;
+	height:40px;
+	padding-top:10px;
+	color:white;
+}
+aside h1{
+	background-color:#7e7e7e;
+	position:relative;
+	top:-30px;
+	margin-left:-10px;
+	margin-right:-10px;
+	font-size:22px;
+	text-align:center;
+	height:40px;
+	padding-top:10px;
+	color:white;
+}
+/*Fim dos Cabeçalhos */
+div.t{
+margin:0;
+}
+/*Inicio section ----------------------------------------------------------------------------------------------------------------*/
+section.col-md-8.col-sm-12.col-xs-12{
+    margin: 2px 0 2px 0;
+	height:auto;
+	padding:10px;	
+	background-color:Gainsboro;
+	border:1px solid rgba(0,0,0,0.1);
+}
+.botoesEsq{
+text-align:left;
+}
+.botoesDir{
+text-align:right;
+}
+p #btSupEs{
+	position:relative;
+	top:-10px;
+	background-color:#0047b3;
+	color:white;
+	font-size:16px;
+	border:1px solid rgba(0,0,0,0.3);
+	border-radius:3px;
+}
+p #btSupDir{
+	position:relative;
+	top:-10px;
+	background-color:#0047b3;
+	color:white;
+	font-size:16px;
+	border:1px solid rgba(0,0,0,0.3);
+	border-radius:3px;
+
+}
+p #btInfeEs{
+	background-color:#0047b3;
+	color:white;
+	font-size:16px;
+	border:1px solid rgba(0,0,0,0.3);
+	border-radius:3px;
+}
+p #btInfeDir{
+	background-color:#0047b3;
+	color:white;
+	font-size:16px;
+	border:1px solid rgba(0,0,0,0.3);
+	border-radius:3px;
+}
+/*Estilo da exposição dos automóveis*/
+.thumbnail{
+	background-color:Gainsboro;
+}
+.linhaEscolha h4{
+	font-size:20px;
+}
+.linhaEscolha .DiariaLivre{
+	background-color:#0047b3;
+	color:white;
+	text-align:center;
+	font-weight:bold;
+	padding:2px;
+}
+.linhaEscolha .precoSection{
+	color:#0047b3;
+	font-size:28px;
+	font-weight:bold;
+}
+.linhaEscolha sup{
+	font-size:14px;
+}
+/*
+.linhaEscolha .btnRight{ caso queira colocar o btn a direita%%%%%%%%%%%%%%
+	text-align:right;
+}
+*/
+hr{
+	background-color:white;
+	color:white;
+	height:2px;
+}
+.infoIlustrativa{
+	font-size:10px;
+	text-align:right;
+}
+/*Fim section--------------------------------------------------------------------------------------------------------------------*/
+
+/*Inicio do aside----------------------------------------------------------------------------------------------------------------*/
+
+aside.col-md-4.col-sm-12.col-xs-12 {
+	margin: 2px 0 2px 0;
+	height:2303px;
+	padding:10px;
+	background-color:#ECECEC;
+	border:1px solid rgba(0,0,0,0.1);
+}
+
+div.col-md-12.col-sm-12.col-xs-12{/*Foto Carro*/
+	position:relative;
+	top:-25px;
+
+}
+aside table#marg{
+	margin:0 auto 0 auto;
+	margin-bottom:5px;
+}
+aside table.tab{
+	margin:0 auto 0 auto;
+	margin-bottom:30px;
+}
+aside table td.cab{
+	background-color:#7e7e7e;
+	text-align:center;
+	width:750px;
+	font-size:18px;	
+	color:white;	
+	padding:5px;
+	
+}
+aside table td.tds{
+	padding:5px;
+	font-size:16px;
+}
+aside table td.tdDireita{
+	text-align:right
+}
+aside table td.tdEsquerda{
+	text-align:left;
+}
+/*Inicio da aside-------------------------------------------------------------------------------------------------------------------*/
+
+/*Inicio Rodape-------------------------------------------------------------------------------------------------------------------------------*/
+footer.row{
+	margin:10px auto 10px auto;
+	padding:15px;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius:4px;
+	background-color:#0047b3;
+	
+
+}
+div.caption{
+	margin-left:auto;
+	margin-right:auto;
+}
+footer div a img{
+	margin-left:80px;
+}
+footer div div h3#fale{
+	margin-left:40px;
+}
+div.caption h3{
+	font-size:22px;
+}
+div.caption a h3{
+	text-decoration:none;
+	color:white;
+}
+div.caption a:hover{
+	color:white;
+}
+footer div#voltarTopo{
+	text-align:center;
+	background-color:#80b3ff;
+	position:relative;
+	top:33px;
+	padding-top:10px;
+	height:50px;
+	font-weight:bold;
+	font-size:16px;
+	display:none;
+}
+footer div#voltarTopo a{
+	text-decoration:none;
+	color:black;
+}
+footer div#voltarTopo a:hover{
+	color:#B80000;
+}
+/*Responsividade Rodape*/
+@media(max-width:480px){
+
+footer div div h3#fale{
+	
+	margin-left:0px;
+}
+}
+@media(max-width:992px){
+footer div#voltarTopo{
+	display:inline-block;
+}
+}
+/*Fim Rodape*/
+
+/*Responsividade*/
+@media(max-width:1200px){
+aside.col-md-4.col-sm-12.col-xs-12 {
+	height:2519px;
+}
+}
+@media(max-width:992px){
+aside.col-md-4.col-sm-12.col-xs-12 {
+	height:auto;
+}
+}
+@media(max-width:768px){
+
+}
+@media(max-width:480px){
+
+}

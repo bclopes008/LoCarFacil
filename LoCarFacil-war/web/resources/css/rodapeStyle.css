@@ -1,0 +1,66 @@
+/* 
+    Created on : 15/05/2016, 20:40:46
+    Author     : Fabio
+*/
+
+@charset "UTF-8";
+/*Inicio Rodape-------------------------------------------------------------------------------------------------------------------------------*/
+footer.row{
+	margin:10px auto 10px auto;
+	padding:15px;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius:4px;
+	background-color:#0047b3;
+}
+div.caption{
+	margin-left:auto;
+	margin-right:auto;
+}
+footer div a img{
+	margin-left:80px;
+}
+footer div div h3#fale{
+	margin-left:40px;
+}
+div.caption h3{
+	font-size:22px;
+}
+div.caption a h3{
+	text-decoration:none;
+	color:white;
+}
+div.caption a:hover{
+	color:white;
+}
+footer div#voltarTopo{
+	text-align:center;
+	background-color:#80b3ff;
+	position:relative;
+	top:33px;
+	padding-top:10px;
+	height:50px;
+	font-weight:bold;
+	font-size:16px;
+	display:none;
+}
+footer div#voltarTopo a{
+	text-decoration:none;
+	color:black;
+}
+footer div#voltarTopo a:hover{
+	color:#B80000;
+}
+/*Responsividade Rodape*/
+@media(max-width:480px){
+
+footer div div h3#fale{
+	
+	margin-left:0px;
+}
+}
+@media(max-width:992px){
+footer div#voltarTopo{
+	display:inline-block;
+}
+}
+/*Fim Rodape*/

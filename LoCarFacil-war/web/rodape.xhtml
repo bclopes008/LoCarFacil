@@ -1,20 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
             <title>Rodape</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
             <h:outputStylesheet name="css/bootstrap.min.css" />
-            <h:outputStylesheet name="css/resumoStyle.css" />
-            <h:outputScript name="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" />
+            <h:outputStylesheet name="css/rodapeStyle.css" />
             <h:outputScript name="js/bootstrap.min.js" />
 
     </h:head>
     <h:body>
-       
+        <ui:composition>
+            
         <!--Inicio do Rodape-->
         <footer class="row">
 
@@ -42,7 +43,7 @@
             <div class="col-md-3 col-sm-6 col-xs-8">
                 <a href="#"><img src="resources/imagens/Assistência.png" alt="Assistência Tecnica" title="Assistência Tecnica"/></a>
                 <div class="caption">
-                    <a href="#"><h3>Assistência Tecnica</h3></a>
+                    <a href="#"><h3>Assistência Técnica</h3></a>
                 </div>
             </div>
 
@@ -53,7 +54,7 @@
             </div>
 
         </footer>
-        
+        </ui:composition>
     </h:body>
 </html>
 

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>Identificação do Usuário</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/identificacaoUsuarioStyle.css" />
+        <h:outputStylesheet name="css/menuStyle.css" />
+        <h:outputStylesheet name="css/rodapeStyle.css" />
+        <h:outputScript name="js/bootstrap.min.js" />
+    </h:head>
+    <h:body>
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+        <div class="container">
+            <div class="row principal">
+                <h:form>
+                    <fieldset>
+                        <legend>Identificação do Usuário</legend>
+                        <h:panelGrid columns="1">
+                            <h:outputLabel for="logimCadastro" value="Login"/>
+                            <h:inputText id="logimCadastro" value=""/>
+                            <h:outputLabel for="senhaCadastro" value="Senha"/>
+                            <h:inputSecret id="senhaCadastro" value=""/>
+                            <h:commandButton value="Entrar"/>
+                        </h:panelGrid>
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h:outputLink id="linkRecuperacao" value="">
+                                    <h:outputText value="Equeci minha senha"/>
+                                </h:outputLink>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h:outputLink id="linkCadastro" value="">
+                                    <h:outputText value="Cadastre-se"/>
+                                </h:outputLink>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </h:form>
+
+            </div>
+        </div>
+        <!--Inicio do Rodape-->
+        <ui:insert>
+            <ui:include src="rodape.xhtml"/>
+        </ui:insert>
+    </h:body>
+</html>
+

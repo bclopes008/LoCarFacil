@@ -25,6 +25,11 @@
             <to-view-id>/protecao.xhtml</to-view-id>
         </navigation-case>
         
+         <navigation-case>
+            <from-outcome>identificacao</from-outcome>
+            <to-view-id>/identificacao.xhtml</to-view-id>
+        </navigation-case>
+        
         <navigation-case>
             <from-outcome>resumo</from-outcome>
             <to-view-id>/resumo.xhtml</to-view-id>
@@ -35,7 +40,15 @@
             <to-view-id>/listagemProdutos.xhtml</to-view-id>
         </navigation-case>
         
-         
+         <navigation-case>
+            <from-outcome>identificarUsuario</from-outcome>
+            <to-view-id>/identificarUsuario.xhtml</to-view-id>
+        </navigation-case>
+        
+         <navigation-case>
+            <from-outcome>cadastroCliente</from-outcome>
+            <to-view-id>/cadastroCliente.xhtml</to-view-id>
+        </navigation-case>
         
          
     </navigation-rule>

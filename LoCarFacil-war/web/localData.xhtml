@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <meta charset="UTF-8"/>
         <title>Local e Data</title>
@@ -11,62 +12,18 @@
 
         <h:outputStylesheet name="css/bootstrap.min.css" />
         <h:outputStylesheet name="css/localDataStyle.css" />
-        <h:outputScript name="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" />
+        <h:outputStylesheet name="css/menuStyle.css" />
+        <h:outputStylesheet name="css/rodapeStyle.css" />
         <h:outputScript name="js/bootstrap.min.js" />
 
     </h:head>
     <h:body>
+
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+
         <h:form>
-            <header class="row">
-
-                <nav class="col-md-12 menuNav">
-
-                    <nav class="navbar navbar-inverse" >
-
-                        <div class="container-fluid">
-                            <div class="navbar-header">
-                                <a class="navbar-brand" href="#" id="retorno">LoCarFácil</a>
-
-                            </div>
-                            <!--Menu Normal-->	
-                            <div class="menuNavNormal">
-                                <ul class="nav navbar-nav" >
-                                    <li><a href="protecao.html">Alugue um Carro</a></li>
-                                    <li><a href="#">Minha Área</a></li>
-                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
-                                    <li><a href="#">Pesquisar Lojas</a></li>
-                                    <li><a href="#">Devolver Aluguel</a></li> 							
-
-                                </ul>
-
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                </ul>
-                            </div>
-                            <!--Menu Small-->	
-                            <div class="btn-group menuNavSmall">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="protecao.html">Alugue um Carro</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Minha Área</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Pesquisar Lojas</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Devolver Aluguel</a></li>		
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </nav>
-
-                </nav>
-            </header>
 
             <!--Aqui fica projeção da locação-->
 
@@ -87,7 +44,7 @@
                     </div>
 
                     <div class="col-md-2 hidden-sm hidden-xs">
-                        <p class="projecao"><img src="resources/imagens/number4Preto.png" alt="Passo 4"/> Indentificação</p>
+                        <p class="projecao"><img src="resources/imagens/number4Preto.png" alt="Passo 4"/> Identificação</p>
                     </div>
 
                     <div class="col-md-2 hidden-sm hidden-xs">
@@ -125,14 +82,14 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <!--<span class="labelStyle">Data de Retirada</span><br/>
                                 <input type="date" id="dataRetira" class="inputStyle" required="required" title="Data de Retirada"/>-->
-                                <h:outputLabel class="labelStyle" value="Data de Retirada"/>
+                                <h:outputLabel class="labelStyle" value="Data de Retirada"/><br/>
                                 <p:calendar value="#{aluguelBean.aluguel.dataRetirada}" id="dataRetira" class="inputStyle" required="true" title="Data de Retirada"/>
                             </div>
 
-                            <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <span class="labelStyle">Hora da Retirada</span><br/>          
                                 <!--<select id="horaRetira" required="required" title="Hora da Retirada">
                                     <option  selected="selected" value="" disabled="disabled">_:_</option>
@@ -199,14 +156,14 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <!--<span class="labelStyle">Data de Devolução</span><br/>
                                 <input type="date" id="dataDevolucao" class="inputStyle" required="required" title="Data de Devolução"/>-->
                                 <h:outputLabel class="labelStyle" value="Data de Devolução"/><br/>
                                 <p:calendar value="#{aluguelBean.aluguel.dataDevolucao}" id="dataDevolucao" class="inputStyle" required="true" title="Data de Devolução"/>
                             </div>
 
-                            <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs-12">
                                 <span class="labelStyle">Hora da Devolução</span><br/>
                                 <!--<select id="horaDevolucao" required="required" title="Hora da Devolução">-->
                                 <!--<select id="horaDevolucao" title="Hora da Devolução">
@@ -271,45 +228,13 @@
 
 
             </div>
-            <!--Inicio do Rodape-->
-            <footer class="row">
-
-                <div class="col-md-3 col-sm-6 col-xs-8">
-                    <a href="#"><img src="resources/imagens/Fale.png" alt="Fale Conosco" title="Fale Conosco"/></a>
-                    <div class="caption">
-                        <a href="#"><h3 id="fale">Fale Conosco</h3></a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-8">
-                    <a href="#"><img src="resources/imagens/Central.png" alt="Central de Resevas" title="Central de Resevas"/></a>
-                    <div class="caption">
-                        <a href="#"><h3>Central de Resevas</h3></a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-8">
-                    <a href="#"><img src="resources/imagens/Perguntas.png" alt="Perguntas Frequentes" title="Perguntas Frequentes"/></a>
-                    <div class="caption">
-                        <a href="#"><h3>Perguntas Frequentes</h3></a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-8">
-                    <a href="#"><img src="resources/imagens/Assistência.png" alt="Assistência Tecnica" title="Assistência Tecnica"/></a>
-                    <div class="caption">
-                        <a href="#"><h3>Assistência Tecnica</h3></a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12" id="voltarTopo">
-                        <p><a href="#retorno">Voltar ao Topo <span class="glyphicon glyphicon-menu-up" ></span></a></p>
-                    </div>
-                </div>
-
-            </footer>
         </h:form>
+
+        <!--Inicio do Rodape-->
+        <ui:insert>
+            <ui:include src="rodape.xhtml"/>
+        </ui:insert>
+
     </h:body>
 </html>
 

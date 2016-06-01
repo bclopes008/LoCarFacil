@@ -11,6 +11,16 @@
         </navigation-case>
         
         <navigation-case>
+            <from-outcome>menu</from-outcome>
+            <to-view-id>/menu.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>rodape</from-outcome>
+            <to-view-id>/rodape.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
             <from-outcome>localData</from-outcome>
             <to-view-id>/localData.xhtml</to-view-id>
         </navigation-case>

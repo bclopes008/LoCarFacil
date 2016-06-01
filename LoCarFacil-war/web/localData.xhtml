@@ -23,13 +23,15 @@
             <ui:include src="menu.xhtml"/>
         </ui:insert>
 
-        <h:form>
+        
 
             <!--Aqui fica projeção da locação-->
 
             <div class="container">
 
                 <div class="row projecaoCor">
+                    
+                    
 
                     <div class="col-md-3 hidden-sm hidden-xs">
                         <p class="projecao local"><img src="resources/imagens/number1Branco.png" alt="Passo 1"/> Local e Data</p>
@@ -55,6 +57,7 @@
 
                 <!--Aqui inicia a parte section -->
                 <div class="row t">
+                    <h:form>
 
                     <section class="col-md-8 col-sm-12 col-xs-12">
 
@@ -64,6 +67,7 @@
 
                             <div class="col-md-12 col-sm-12 col-xs-12 botoesDir">
                                 <p:commandButton id="btSupDir" class="btn btn-primary" action="#{aluguelBean.escolherGrupo()}" value="Próximo" ajax="false "/>
+                    
                             </div>
 
                         </div>
@@ -224,11 +228,12 @@
 
                     </aside>
 
+                     </h:form>
                 </div>
 
 
             </div>
-        </h:form>
+       
 
         <!--Inicio do Rodape-->
         <ui:insert>

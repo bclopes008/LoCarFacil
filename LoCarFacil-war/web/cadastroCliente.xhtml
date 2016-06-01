@@ -19,151 +19,151 @@
         <ui:insert>
             <ui:include src="menu.xhtml"/>
         </ui:insert>
-        
+
         <div class="container">
             <div class="row principal">
 
+                <section class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row cabH3">
+                        <h3>Cadastro do Cliente</h3>
+                    </div>
+                    <h:form>
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <h:panelGrid columns="4">
+                                <h:outputLabel for="nomeCadastro" value="Nome Completo*"/>
+                                <h:inputText id="nomeCadastro"/>
 
-                <div class="row cabH3">
-                    <h3>Cadastro do Cliente</h3>
-                </div>
-                <h:form>
-                    <fieldset>
-                        <legend>Dados Pessoais</legend>
-                        <h:panelGrid columns="4">
-                            <h:outputLabel for="nomeCadastro" value="Nome Completo*"/>
-                            <h:inputText id="nomeCadastro"/>
+                                <h:outputLabel for="cpfCadastro" value="CPF*"/>
+                                <h:inputText id="cpfCadastro"/>
 
-                            <h:outputLabel for="cpfCadastro" value="CPF*"/>
-                            <h:inputText id="cpfCadastro"/>
+                                <h:outputLabel for="dataNasCadastro" value="Data de Nascimento*"/>
+                                <h:inputText id="dataNasCadastro"/>
 
-                            <h:outputLabel for="dataNasCadastro" value="Data de Nascimento*"/>
-                            <h:inputText id="dataNasCadastro"/>
+                                <h:outputLabel for="#" value="Sexo*"/>
+                                <h:selectOneRadio value="#">
+                                    <f:selectItem itemValue="true" id="masc" itemLabel="Masculino"/>
+                                    <f:selectItem itemValue="false" id="femi" itemLabel="Feminino"/>
+                                </h:selectOneRadio>
 
-                            <h:outputLabel for="#" value="Sexo*"/>
-                            <h:selectOneRadio value="#">
-                                <f:selectItem itemValue="true" id="masc" itemLabel="Masculino"/>
-                                <f:selectItem itemValue="false" id="femi" itemLabel="Feminino"/>
-                            </h:selectOneRadio>
+                                <h:outputLabel for="emailCadastro" value="E-mail*"/>
+                                <h:inputText id="emailCadastro"/>
 
-                            <h:outputLabel for="emailCadastro" value="E-mail*"/>
-                            <h:inputText id="emailCadastro"/>
+                                <h:outputLabel for="telCadastro" value="Tel.Celular*"/>
+                                <h:inputText id="telCadastro"/>
 
-                            <h:outputLabel for="telCadastro" value="Tel.Celular*"/>
-                            <h:inputText id="telCadastro"/>
+                            </h:panelGrid>
 
-                        </h:panelGrid>
-
-                    </fieldset>
-
-
-
-                    <fieldset>
-                        <legend>Carteira Nacional de Habilitação</legend>
-                        <h:panelGrid columns="4">
-                            <h:outputLabel for="numeroHabilitacao" value="N° da Habilitação*"/>
-                            <h:inputText id="numeroHabilitacao"/>
-
-                            <h:outputLabel for="registrooHabilitacao" value="N° de Registro*"/>
-                            <h:inputText id="registrooHabilitacao"/>
-
-                            <h:outputLabel for="estadoHabilitação" value="Estado Emissor*"/>
-                            <h:selectOneMenu value="#" id="estadoHabilitação" title="Estado Emissor">
-                                <f:selectItem itemLabel="Selecione"/>
-                                <f:selectItem itemValue="SP" itemLabel="SP"/>
-                                <f:selectItem itemValue="RJ" itemLabel="RJ"/>
-                            </h:selectOneMenu>
-
-                            <h:outputLabel for="validadeHabilitação" value="Validade*"/>
-                            <h:inputText id="validadeHabilitação"/>
-
-                        </h:panelGrid>
-
-                    </fieldset>
+                        </fieldset>
 
 
 
-                    <fieldset>
-                        <legend>Endereço Residencial</legend>
-                        <h:panelGrid columns="4">
-                            <h:outputLabel for="cepEndereco" value="CEP*"/>
-                            <h:inputText id="cepEndereco"/>
+                        <fieldset>
+                            <legend>Carteira Nacional de Habilitação</legend>
+                            <h:panelGrid columns="4">
+                                <h:outputLabel for="numeroHabilitacao" value="N° da Habilitação*"/>
+                                <h:inputText id="numeroHabilitacao"/>
 
-                            <h:outputLabel for="tipoEndereco" value="Tipo de Endereço*"/>
-                            <h:selectOneMenu value="#" id="tipoEndereco" title="Tipo de Endereço">
-                                <f:selectItem itemLabel="Selecione"/>
-                                <f:selectItem itemValue="Rua" itemLabel="Rua"/>
-                                <f:selectItem itemValue="Praça" itemLabel="Praça"/>
-                                <f:selectItem itemValue="Beco" itemLabel="Beco"/>
-                                <f:selectItem itemValue="Alameda" itemLabel="Alameda"/>
-                                <f:selectItem itemValue="Bloco" itemLabel="Bloco"/>
-                                <f:selectItem itemValue="Estrada" itemLabel="Estrada"/>
-                                <f:selectItem itemValue="Quadra" itemLabel="Quadra"/>
-                                <f:selectItem itemValue="Rodovia" itemLabel="Rodovia"/>
-                                <f:selectItem itemValue="Via" itemLabel="Via"/>
-                                <f:selectItem itemValue="Vila" itemLabel="Vila"/>
-                            </h:selectOneMenu>
+                                <h:outputLabel for="registrooHabilitacao" value="N° de Registro*"/>
+                                <h:inputText id="registrooHabilitacao"/>
 
-                            <h:outputLabel for="lograEndereco" value="Endereço*"/>
-                            <h:inputText id="lograEndereco"/>
+                                <h:outputLabel for="estadoHabilitação" value="Estado Emissor*"/>
+                                <h:selectOneMenu value="#" id="estadoHabilitação" title="Estado Emissor">
+                                    <f:selectItem itemLabel="Selecione"/>
+                                    <f:selectItem itemValue="SP" itemLabel="SP"/>
+                                    <f:selectItem itemValue="RJ" itemLabel="RJ"/>
+                                </h:selectOneMenu>
 
-                            <h:outputLabel for="numeroEndereco" value="Número*"/>
-                            <h:inputText id="numeroEndereco"/>
+                                <h:outputLabel for="validadeHabilitação" value="Validade*"/>
+                                <h:inputText id="validadeHabilitação"/>
 
-                            <h:outputLabel for="complementoEndereco" value="Complemento*"/>
-                            <h:inputText id="complementoEndereco"/>
+                            </h:panelGrid>
 
-                            <h:outputLabel for="bairroEndereco" value="Bairro*"/>
-                            <h:inputText id="bairroEndereco"/>
+                        </fieldset>
 
-                            <h:outputLabel for="cidadeEndereco" value="Cidade*"/>
-                            <h:inputText id="cidadeEndereco"/>
 
-                            <h:outputLabel for="estadoEndereco" value="Estado(DF)*"/>
-                            <h:selectOneMenu value="estadoEndereco" id="teste" title="Estado">
-                                <f:selectItem itemLabel="Selecione"/>
-                                <f:selectItem itemValue="SP" itemLabel="SP"/>
-                                <f:selectItem itemValue="RJ" itemLabel="RJ"/>
-                            </h:selectOneMenu>
 
-                        </h:panelGrid>
+                        <fieldset>
+                            <legend>Endereço Residencial</legend>
+                            <h:panelGrid columns="4">
+                                <h:outputLabel for="cepEndereco" value="CEP*"/>
+                                <h:inputText id="cepEndereco"/>
 
-                    </fieldset>
-                    
-                    
-                     <fieldset>
-                        <legend>Referência Pessoal</legend>
-                        <h:panelGrid columns="4">
-                            <h:outputLabel for="nomeReferencia" value="Nome da Referência*"/>
-                            <h:inputText id="nomeReferencia"/>
+                                <h:outputLabel for="tipoEndereco" value="Tipo de Endereço*"/>
+                                <h:selectOneMenu value="#" id="tipoEndereco" title="Tipo de Endereço">
+                                    <f:selectItem itemLabel="Selecione"/>
+                                    <f:selectItem itemValue="Rua" itemLabel="Rua"/>
+                                    <f:selectItem itemValue="Praça" itemLabel="Praça"/>
+                                    <f:selectItem itemValue="Beco" itemLabel="Beco"/>
+                                    <f:selectItem itemValue="Alameda" itemLabel="Alameda"/>
+                                    <f:selectItem itemValue="Bloco" itemLabel="Bloco"/>
+                                    <f:selectItem itemValue="Estrada" itemLabel="Estrada"/>
+                                    <f:selectItem itemValue="Quadra" itemLabel="Quadra"/>
+                                    <f:selectItem itemValue="Rodovia" itemLabel="Rodovia"/>
+                                    <f:selectItem itemValue="Via" itemLabel="Via"/>
+                                    <f:selectItem itemValue="Vila" itemLabel="Vila"/>
+                                </h:selectOneMenu>
 
-                             <h:outputLabel for="telReferencia" value="Tel. da Referência*"/>
-                            <h:inputText id="telReferencia"/>
+                                <h:outputLabel for="lograEndereco" value="Endereço*"/>
+                                <h:inputText id="lograEndereco"/>
 
-                        </h:panelGrid>
+                                <h:outputLabel for="numeroEndereco" value="Número*"/>
+                                <h:inputText id="numeroEndereco"/>
 
-                    </fieldset>
-                    
-                    
-                    <fieldset>
-                        <legend>Cadastrar Login e Senha</legend>
-                        <h:panelGrid columns="2">
-                            <h:outputLabel for="loginAutenticacao" value="Login*"/>
-                            <h:inputText id="loginAutenticacao"/>
+                                <h:outputLabel for="complementoEndereco" value="Complemento*"/>
+                                <h:inputText id="complementoEndereco"/>
 
-                             <h:outputLabel for="senhaAutenticacao" value="Senha*"/>
-                            <h:inputSecret id="senhaAutenticacao"/>
-                            
-                             <h:outputLabel for="conSenhaAutenticacao" value="Confirma Senha*"/>
-                            <h:inputSecret id="conSenhaAutenticacao"/>
+                                <h:outputLabel for="bairroEndereco" value="Bairro*"/>
+                                <h:inputText id="bairroEndereco"/>
 
-                        </h:panelGrid>
+                                <h:outputLabel for="cidadeEndereco" value="Cidade*"/>
+                                <h:inputText id="cidadeEndereco"/>
 
-                    </fieldset>
-                    
-                    <h:commandButton value="Salvar Dados"/>
-                </h:form>
+                                <h:outputLabel for="estadoEndereco" value="Estado(DF)*"/>
+                                <h:selectOneMenu value="estadoEndereco" id="teste" title="Estado">
+                                    <f:selectItem itemLabel="Selecione"/>
+                                    <f:selectItem itemValue="SP" itemLabel="SP"/>
+                                    <f:selectItem itemValue="RJ" itemLabel="RJ"/>
+                                </h:selectOneMenu>
 
+                            </h:panelGrid>
+
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend>Referência Pessoal</legend>
+                            <h:panelGrid columns="4">
+                                <h:outputLabel for="nomeReferencia" value="Nome da Referência*"/>
+                                <h:inputText id="nomeReferencia"/>
+
+                                <h:outputLabel for="telReferencia" value="Tel. da Referência*"/>
+                                <h:inputText id="telReferencia"/>
+
+                            </h:panelGrid>
+
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend>Cadastrar Login e Senha</legend>
+                            <h:panelGrid columns="2">
+                                <h:outputLabel for="loginAutenticacao" value="Login*"/>
+                                <h:inputText id="loginAutenticacao"/>
+
+                                <h:outputLabel for="senhaAutenticacao" value="Senha*"/>
+                                <h:inputSecret id="senhaAutenticacao"/>
+
+                                <h:outputLabel for="conSenhaAutenticacao" value="Confirma Senha*"/>
+                                <h:inputSecret id="conSenhaAutenticacao"/>
+
+                            </h:panelGrid>
+
+                        </fieldset>
+
+                        <h:commandButton value="Salvar Dados"/>
+                    </h:form>
+                </section>
             </div>
         </div>
         <!--Inicio do Rodape-->

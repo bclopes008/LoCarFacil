@@ -26,8 +26,18 @@
         </navigation-case>
         
         <navigation-case>
+            <from-outcome>minhaArea</from-outcome>
+            <to-view-id>/minhaArea.xhtml</to-view-id>
+        </navigation-case>
+        
+         <navigation-case>
             <from-outcome>escolherGrupo</from-outcome>
             <to-view-id>/escolherGrupo.xhtml</to-view-id>
+        </navigation-case>
+        
+         <navigation-case>
+            <from-outcome>pesquisarLojas</from-outcome>
+            <to-view-id>/pesquisarLojas.xhtml</to-view-id>
         </navigation-case>
         
         <navigation-case>

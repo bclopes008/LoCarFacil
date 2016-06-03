@@ -1,12 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Pesquisar Lojas</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/pesquisarLojasStyle.css" /> 
+        <h:outputStylesheet name="css/menuStyle.css" />
+        <h:outputStylesheet name="css/rodapeStyle.css" />
+        <h:outputScript name="js/bootstrap.min.js" />
     </h:head>
     <h:body>
-        Hello from Facelets
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+
+        <div class="container">
+            <div class="row">
+                <p>Consultar Lojas</p>
+                <h:form>
+                        
+                    <table>
+                        <tr> <td>Estado</td> <td>Cidade</td> <td>Local</td> <td>Endereço</td> <td>Mapa</td> </tr>
+                        <tr> <td>SP</td> <td>São Paulo</td> <td>Aeroporto de Congonhas</td> <td>Av.Washington Luis, 900</td><td><img src="resources/imagens/location-pin.png" alt="Localização"/></td> </tr>
+                    </table>
+                </h:form>
+            </div>
+        </div>
+
+
+        <!--Inicio do Rodape-->
+        <ui:insert>
+            <ui:include src="rodape.xhtml"/>
+        </ui:insert>
     </h:body>
 </html>
 

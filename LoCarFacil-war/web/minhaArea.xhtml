@@ -1,12 +1,55 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Minha Área</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/minhaAreaStyle.css" />
+        <h:outputStylesheet name="css/menuStyle.css" />
+        <h:outputStylesheet name="css/rodapeStyle.css" />
+        <h:outputScript name="js/bootstrap.min.js" />
+
     </h:head>
     <h:body>
-        Hello from Facelets
+
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+
+        <div class="container">
+            <div class="row">
+              
+                <table>
+                    <tr><td colspan="4">Meus Dados</td></tr>
+                </table>
+                <table>
+                    <tr> <td>Código</td> <td>Nome</td> <td>CPF</td> <td>Alterar</td> </tr>
+                    <tr> <td>1</td> <td>Fulano</td> <td>99911133377</td> <td><img src="resources/imagens/new-file.png" alt="Alterar"/></td> </tr>
+                </table>
+                
+                
+                 <table>
+                    <tr><td colspan="9">Milhas Reservas</td></tr>
+                </table>
+                <table>
+                    <tr> <td>Número</td> <td>Status</td> <td>Localização Retirada</td> <td>Data Retirada</td> <td>Localização Devolução</td> <td>Data Devolução</td> <td>Consultar</td> <td>Alterar</td> <td>Cancelar</td></tr>
+                    <tr> <td>123456789</td> <td>Cancelado</td> <td>São Paulo - SP</td> <td>03/06/2016</td> <td>São Paulo - SP</td> <td>05/06/2016</td> <td><img src="resources/imagens/search.png" alt="Pesquisar"/></td> <td><img src="resources/imagens/new-file.png" alt="Alterar"/></td> <td><img src="resources/imagens/cancel.png" alt="Cancelar"/></td></tr>
+                </table>
+
+            </div>
+        </div>      
+
+
+        <!--Inicio do Rodape-->
+        <ui:insert>
+            <ui:include src="rodape.xhtml"/>
+        </ui:insert>
+
     </h:body>
 </html>
 

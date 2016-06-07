@@ -72,4 +72,9 @@
         
          
     </navigation-rule>
+   <!-- <managed-bean>
+        <managed-bean-name>clienteBean</managed-bean-name>
+        <managed-bean-class>sp.senac.pi4.bean.ClienteBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>-->
 </faces-config>

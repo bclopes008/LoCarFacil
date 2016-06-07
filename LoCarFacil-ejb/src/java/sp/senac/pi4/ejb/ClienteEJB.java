@@ -6,6 +6,8 @@
 package sp.senac.pi4.ejb;
 
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import sp.senac.pi4.ejb.Entities.Cliente;
 
 /**
@@ -14,15 +16,17 @@ import sp.senac.pi4.ejb.Entities.Cliente;
  */
 @Stateless
 public class ClienteEJB implements ClienteEJBLocal {
-
+    @PersistenceContext(name = "LoCarFacil-ejbPU")
+    private EntityManager em;
+    
     @Override
     public void cadastrarCliente(Cliente cliente){
-        
+        em.persist(cliente);
     }
 
     @Override
     public void alterarCliente(Cliente cliente) {
-        
+        em.merge(cliente);
     }
 
     @Override

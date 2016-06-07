@@ -7,7 +7,7 @@ package sp.senac.pi4.ejb;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+//import javax.persistence.PersistenceContext;
 import sp.senac.pi4.ejb.Entities.Cliente;
 
 /**
@@ -15,8 +15,9 @@ import sp.senac.pi4.ejb.Entities.Cliente;
  * @author vsantos
  */
 @Stateless
+
 public class ClienteEJB implements ClienteEJBLocal {
-    @PersistenceContext(name = "LoCarFacil-ejbPU")
+    //@PersistenceContext()
     private EntityManager em;
     
     @Override

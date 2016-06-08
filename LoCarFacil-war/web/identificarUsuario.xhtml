@@ -24,11 +24,11 @@
                     <fieldset>
                         <legend>Identificação do Usuário</legend>
                         <h:panelGrid columns="1">
-                            <h:outputLabel for="logimCadastro" value="Login"/>
-                            <h:inputText id="logimCadastro" value=""/>
+                            <h:outputLabel for="loginCadastro" value="Login"/>
+                            <h:inputText id="loginCadastro" value="#{loginBean.user}"/>
                             <h:outputLabel for="senhaCadastro" value="Senha"/>
-                            <h:inputSecret id="senhaCadastro" value=""/>
-                            <h:commandButton value="Entrar"/>
+                            <h:inputSecret id="senhaCadastro" value="#{loginBean.password}"/>
+                            <h:commandButton value="Entrar" action="#{loginBean.fazerLogin}"/>
                         </h:panelGrid>
                         <div class="row">
 

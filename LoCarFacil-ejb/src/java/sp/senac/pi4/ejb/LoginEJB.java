@@ -5,6 +5,7 @@
  */
 package sp.senac.pi4.ejb;
 
+import java.util.ArrayList;
 import javax.ejb.Stateless;
 
 /**
@@ -14,14 +15,16 @@ import javax.ejb.Stateless;
 @Stateless
 public class LoginEJB implements LoginEJBLocal {
 
-    public int loginValidation(String user, String password){
+    public boolean loginValidation(String user, String password){
         //procurar aqui no banco e retornar o codigo da pessoa
             //procurar a pessoa e trazer o nome, id e tipo de pessoa
             
+        ArrayList<String> person = new ArrayList<String>();
+        person.add("2");
+        person.add("William");
+        person.add("Manager");
         
-        int idPerson = 2;
-        
-        return idPerson;
+        return true;
     }
     
     

@@ -5,6 +5,7 @@
  */
 package sp.senac.pi4.bean;
 
+import java.util.ArrayList;
 import sp.senac.pi4.ejb.LoginEJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -39,7 +40,8 @@ public class LoginBean {
     }
     
    public boolean loginValidation(){
-       loginEjb.loginValidation(user, password);
+       ArrayList<String> person = new ArrayList<String>();
+       //person = loginEjb.loginValidation(user, password);
        return true;
    }
      

@@ -17,6 +17,7 @@ public class UsuarioDAO {
     private EntityManagerFactory factory = Persistence.createEntityManagerFactory("user");
     
     public int isThereUser(){
+        
         EntityManager em = factory.createEntityManager();
         //em.f
         //Person person = em.find(Person.class, 1);

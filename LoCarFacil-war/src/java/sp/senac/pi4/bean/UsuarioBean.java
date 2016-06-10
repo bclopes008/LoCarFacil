@@ -22,4 +22,5 @@ public class UsuarioBean {
     public UsuarioBean() {
     }
     
+    
 }

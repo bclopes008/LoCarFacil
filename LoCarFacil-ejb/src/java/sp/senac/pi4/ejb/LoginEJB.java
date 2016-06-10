@@ -6,7 +6,9 @@
 package sp.senac.pi4.ejb;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.Stateless;
+import sp.senac.pi4.DAO.UsuarioDAO;
 
 /**
  *
@@ -14,19 +16,25 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class LoginEJB implements LoginEJBLocal {
-
-    public boolean loginValidation(String user, String password){
-        //procurar aqui no banco e retornar o codigo da pessoa
-            //procurar a pessoa e trazer o nome, id e tipo de pessoa
-            
-        ArrayList<String> person = new ArrayList<String>();
-        person.add("2");
-        person.add("William");
-        person.add("Manager");
         
-        return true;
+    @Override
+    public boolean loginValidation(String user, String password){
+        System.out.println(user + "CARALHO" + password);
+        UsuarioDAO userDAO = new UsuarioDAO();
+        List<String> users = new ArrayList<String>();
+        users = userDAO.isThereUser(user,password);
+        //if(!users.isEmpty()){
+            String name = users.get(0);
+            System.out.println(users.get(0) + "Chegou");
+            String id = users.get(1);
+            return true;
+        //}
+        //else{
+          //  return false;
+        //}        
     }
     
+
     
     
 }

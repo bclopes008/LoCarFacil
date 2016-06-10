@@ -13,5 +13,5 @@ import javax.ejb.Local;
  */
 @Local
 public interface LoginEJBLocal {
-    
+    public boolean loginValidation(String user, String password);
 }

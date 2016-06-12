@@ -4,7 +4,9 @@
     <jta-data-source>LocarFacil</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/LocarFacil"/>
+      <property name="javax.persistence.jdbc.password" value="1234"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
     </properties>
   </persistence-unit>
 </persistence>

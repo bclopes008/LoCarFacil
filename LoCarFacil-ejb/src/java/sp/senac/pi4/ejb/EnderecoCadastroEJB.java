@@ -23,8 +23,9 @@ public class EnderecoCadastroEJB implements EnderecoCadastroEJBLocal {
     public boolean addressRegister(String cep, String street, String compl, String city, String streetType, String number, String neigh, String state){
         System.out.println("222222222");
         Endereco address = new Endereco();
+        Integer i = 2;
         EnderecoDAO addressDAO = new EnderecoDAO();
-       // address.setIdcliente(8);
+        address.setIdcliente(i);
         address.setCep(cep);
         address.setBairro(neigh);
         address.setNumero(number);

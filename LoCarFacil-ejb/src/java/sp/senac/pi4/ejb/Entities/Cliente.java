@@ -53,8 +53,8 @@ public class Cliente implements Serializable {
     @JoinColumn(name = "IDPESSOA", referencedColumnName = "IDPESSOA")
     @ManyToOne
     private Pessoa idpessoa;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idcliente")
-    private Collection<Endereco> enderecoCollection;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idcliente")
+//    private Collection<Endereco> enderecoCollection;
 
     public Cliente() {
     }
@@ -101,14 +101,14 @@ public class Cliente implements Serializable {
         this.idpessoa = idpessoa;
     }
 
-    @XmlTransient
-    public Collection<Endereco> getEnderecoCollection() {
-        return enderecoCollection;
-    }
-
-    public void setEnderecoCollection(Collection<Endereco> enderecoCollection) {
-        this.enderecoCollection = enderecoCollection;
-    }
+//    @XmlTransient
+//    public Collection<Endereco> getEnderecoCollection() {
+//        return enderecoCollection;
+//    }
+//
+//    public void setEnderecoCollection(Collection<Endereco> enderecoCollection) {
+//        this.enderecoCollection = enderecoCollection;
+//    }
 
     @Override
     public int hashCode() {

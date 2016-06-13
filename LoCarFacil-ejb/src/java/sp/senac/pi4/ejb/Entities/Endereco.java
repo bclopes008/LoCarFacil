@@ -12,8 +12,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -31,6 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Endereco.findAll", query = "SELECT e FROM Endereco e"),
     @NamedQuery(name = "Endereco.findByIdendereco", query = "SELECT e FROM Endereco e WHERE e.idendereco = :idendereco"),
+    @NamedQuery(name = "Endereco.findByIdcliente", query = "SELECT e FROM Endereco e WHERE e.idcliente = :idcliente"),
     @NamedQuery(name = "Endereco.findByTipoendereco", query = "SELECT e FROM Endereco e WHERE e.tipoendereco = :tipoendereco"),
     @NamedQuery(name = "Endereco.findByLogradouro", query = "SELECT e FROM Endereco e WHERE e.logradouro = :logradouro"),
     @NamedQuery(name = "Endereco.findByNumero", query = "SELECT e FROM Endereco e WHERE e.numero = :numero"),
@@ -41,12 +40,17 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Endereco.findByObservacoes", query = "SELECT e FROM Endereco e WHERE e.observacoes = :observacoes"),
     @NamedQuery(name = "Endereco.findByCep", query = "SELECT e FROM Endereco e WHERE e.cep = :cep")})
 public class Endereco implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "IDENDERECO")
     private Integer idendereco;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "IDCLIENTE")
+    private int idcliente;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 2)
@@ -92,9 +96,6 @@ public class Endereco implements Serializable {
     @Size(min = 1, max = 11)
     @Column(name = "CEP")
     private String cep;
-    @JoinColumn(name = "IDCLIENTE", referencedColumnName = "IDCLIENTE")
-    @ManyToOne(optional = false)
-    private Cliente idcliente;
 
     public Endereco() {
     }
@@ -103,8 +104,9 @@ public class Endereco implements Serializable {
         this.idendereco = idendereco;
     }
 
-    public Endereco(Integer idendereco, String tipoendereco, String logradouro, String numero, String complemento, String bairro, String estado, String cidade, String observacoes, String cep) {
+    public Endereco(Integer idendereco, int idcliente, String tipoendereco, String logradouro, String numero, String complemento, String bairro, String estado, String cidade, String observacoes, String cep) {
         this.idendereco = idendereco;
+        this.idcliente = idcliente;
         this.tipoendereco = tipoendereco;
         this.logradouro = logradouro;
         this.numero = numero;
@@ -122,6 +124,14 @@ public class Endereco implements Serializable {
 
     public void setIdendereco(Integer idendereco) {
         this.idendereco = idendereco;
+    }
+
+    public int getIdcliente() {
+        return idcliente;
+    }
+
+    public void setIdcliente(int idcliente) {
+        this.idcliente = idcliente;
     }
 
     public String getTipoendereco() {
@@ -194,14 +204,6 @@ public class Endereco implements Serializable {
 
     public void setCep(String cep) {
         this.cep = cep;
-    }
-
-    public Cliente getIdcliente() {
-        return idcliente;
-    }
-
-    public void setIdcliente(Cliente idcliente) {
-        this.idcliente = idcliente;
     }
 
     @Override

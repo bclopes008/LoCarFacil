@@ -5,14 +5,14 @@
  */
 package sp.senac.pi4.ejb;
 
+import java.util.Date;
 import javax.ejb.Local;
-import sp.senac.pi4.ejb.Entities.Pessoa;
 
 /**
  *
  * @author BrunoWilliam
  */
 @Local
-public interface LoginEJBLocal {
-    public boolean loginValidation(String user, String password);
+public interface PessoaCadastroEJBLocal {
+    public boolean personRegister(String name, String cpf, String celPhone, String email, char genre, Date dateBirth);    
 }

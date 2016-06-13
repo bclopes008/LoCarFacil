@@ -6,13 +6,12 @@
 package sp.senac.pi4.ejb;
 
 import javax.ejb.Local;
-import sp.senac.pi4.ejb.Entities.Pessoa;
 
 /**
  *
  * @author BrunoWilliam
  */
 @Local
-public interface LoginEJBLocal {
-    public boolean loginValidation(String user, String password);
+public interface UsuarioCadastroEJBLocal {
+    public boolean userRegister(String userLogin, String password, String passwordConfirmation);    
 }

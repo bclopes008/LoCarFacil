@@ -7,7 +7,7 @@ package sp.senac.pi4.bean;
 
 import java.util.ArrayList;
 import javax.ejb.EJB;
-import sp.senac.pi4.ejb.LoginEJB;
+import sp.senac.pi4.ejb.LoginEJBLocal;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -20,7 +20,7 @@ import javax.faces.bean.SessionScoped;
 public class LoginBean {
     
     @EJB
-    private LoginEJB loginEjb;    
+    private LoginEJBLocal loginEJBLocal;    
     private String user, password;
     
     public void fazerLogin()
@@ -44,21 +44,25 @@ public class LoginBean {
         return password;
     }
 
-    public LoginEJB getLoginEjb() {
-        return loginEjb;
+    public LoginEJBLocal getLoginEjb() {
+        return loginEJBLocal;
     }
 
-    public void setLoginEjb(LoginEJB loginEjb) {
-        this.loginEjb = loginEjb;
+    public void setLoginEjb(LoginEJBLocal loginEjb) {
+        this.loginEJBLocal = loginEjb;
     }
     
     
-   public boolean loginValidation(){
+   public String loginValidation(){       
+       System.out.println("UM" + user);       
+       boolean isThere = loginEJBLocal.loginValidation(user, password);
+       if(isThere == true){
+           return "/protecao.xhtml";
+       }
+       else{
+           return "/identificarUsuario.xhtml";
+       }
        
-       System.out.println("UM" + user);
-       
-       boolean isThere = loginEjb.loginValidation(user, password);
-       return isThere;
    }
      
 }

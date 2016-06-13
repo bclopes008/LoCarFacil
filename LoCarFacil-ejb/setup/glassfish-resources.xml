@@ -11,4 +11,5 @@
         <property name="driverClass" value="org.apache.derby.jdbc.ClientDriver"/>
     </jdbc-connection-pool>
     <jdbc-resource enabled="true" jndi-name="LocarFacil" object-type="user" pool-name="derby_net_LocarFacil_saPool"/>
+    <jdbc-resource enabled="true" jndi-name="LocarFacilJpa" object-type="user" pool-name="derby_net_LocarFacil_saPool"/>
 </resources>

@@ -176,13 +176,13 @@ public class CadastroPerfil {
     
     public String userRegister(){        
         System.out.println("rrrrr");
-        boolean userRegister = pessoaCadastroEJBLocal.personRegister(name, cpf, celPhone, email, genre, dateBirth);
-        if(userRegister == true){
-            System.out.println(cep + " " + street+ " " + compl + " " +city+ " " + streetType + " " +number+ " " + neigh + " " + state);
-            userRegister = enderecoCadastroEJBLocal.addressRegister(cep, street, compl, city, "", number, neigh, "");
-            userRegister = usuarioCadastroEJBLocal.userRegister(user, password, passwordConfirmation);
-       }
+        
+        int userId = pessoaCadastroEJBLocal.personRegister(name, cpf, celPhone, email, genre, dateBirth);
+        System.out.println(cep+" " + street+" " + compl+ " " +city+ " " +"ff"+ " " +number+ " " +neigh+ "ff" +" " +userId);
+        if(userId > 0){
+            enderecoCadastroEJBLocal.addressRegister(cep, street, compl, city, "ff", number, neigh, "ff", userId);
+            usuarioCadastroEJBLocal.userRegister(user, password, passwordConfirmation, userId);
+        }
         return "/identificarUsuario.xhtml";        
-    }
-    
+    }    
 }

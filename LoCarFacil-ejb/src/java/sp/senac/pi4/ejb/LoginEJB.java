@@ -24,7 +24,6 @@ public class LoginEJB implements LoginEJBLocal {
         
     @Override
     public boolean loginValidation(String user, String password){
-        System.out.println(user + "CARALHO" + password);
         UsuarioDAO userDAO = new UsuarioDAO();
         PessoaDAO personDAO = new PessoaDAO();
         Usuario userData; 
@@ -32,7 +31,7 @@ public class LoginEJB implements LoginEJBLocal {
         userData = (Usuario) userDAO.isThereUser(user,password);
         if(userData != null){
             if(userData.getIdpessoa() > 0){
-                person = personDAO.personData(userData.getIdpessoa());
+                person = personDAO.returnPersonById(userData);
                 createSession(person);
                 return true;
             }        

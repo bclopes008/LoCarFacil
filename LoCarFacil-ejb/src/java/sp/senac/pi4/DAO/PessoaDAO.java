@@ -8,7 +8,9 @@ package sp.senac.pi4.DAO;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import sp.senac.pi4.ejb.Entities.Pessoa;
+import sp.senac.pi4.ejb.Entities.Usuario;
 
 /**
  *
@@ -19,14 +21,27 @@ public class PessoaDAO {
     
     EntityManager em = factory.createEntityManager();
     
-    public Pessoa personData(int idPerson){
-        return em.createNamedQuery("Pessoa.findByIdpessoa", Pessoa.class).setParameter("idpessoa", idPerson).getSingleResult();                
+//    public Pessoa personData(int idPerson){
+//        return em.createNamedQuery("Pessoa.findByIdpessoa", Pessoa.class).setParameter("idpessoa", idPerson).getSingleResult();                
+//    }
+    
+    public int personRegister(Pessoa person){        
+        em.persist(person);
+        person = returnPersonByCpf(person);
+        return person.getIdpessoa();
+    }
+    public Pessoa returnPersonByCpf(Pessoa person){
+        Query query;
+        query = em.createNamedQuery("Pessoa.findByCpf", Pessoa.class);
+        query.setParameter("cpf", person.getCpf());
+        person = (Pessoa) query.getSingleResult();
+        return person;
     }
     
-    public boolean personRegister(Pessoa person){
-        em.persist(person);
-        person = em.merge(person);
-        System.out.println(person.getIdpessoa() + "IDIIIIIIIIIIIIIIIIIIII!!!!!!!!!!");
-        return true;
+        public Pessoa returnPersonById(Usuario user){
+        Query query;
+        query = em.createNamedQuery("Pessoa.findByIdpessoa", Pessoa.class);
+        query.setParameter("idpessoa", user.getIdpessoa());
+        return (Pessoa) query.getSingleResult();
     }
 }

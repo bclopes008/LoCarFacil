@@ -20,12 +20,10 @@ import sp.senac.pi4.ejb.Entities.Endereco;
 public class EnderecoCadastroEJB implements EnderecoCadastroEJBLocal {
     
     @Override
-    public boolean addressRegister(String cep, String street, String compl, String city, String streetType, String number, String neigh, String state){
-        System.out.println("222222222");
+    public boolean addressRegister(String cep, String street, String compl, String city, String streetType, String number, String neigh, String state, int idPerson){
         Endereco address = new Endereco();
-        Integer i = 2;
         EnderecoDAO addressDAO = new EnderecoDAO();
-        address.setIdcliente(i);
+        address.setIdcliente(idPerson);
         address.setCep(cep);
         address.setBairro(neigh);
         address.setNumero(number);
@@ -34,7 +32,6 @@ public class EnderecoCadastroEJB implements EnderecoCadastroEJBLocal {
         address.setCidade(city);
         address.setTipoendereco(streetType);
         address.setEstado(state);
-        System.out.println("3333333333");
         return addressDAO.addressRegister(address);
         
     }

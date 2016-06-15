@@ -13,5 +13,5 @@ import javax.ejb.Local;
  */
 @Local
 public interface UsuarioCadastroEJBLocal {
-    public boolean userRegister(String userLogin, String password, String passwordConfirmation);    
+    public boolean userRegister(String userLogin, String password, String passwordConfirmation, int userId);    
 }

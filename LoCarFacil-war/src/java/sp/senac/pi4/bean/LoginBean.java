@@ -23,9 +23,7 @@ public class LoginBean {
     private LoginEJBLocal loginEJBLocal;    
     private String user, password;
     
-    public void fazerLogin()
-    {
-        System.out.println("consegui!" + user + " - " + password);
+    public void fazerLogin(){
     }
 
     public String getUser() {
@@ -54,10 +52,9 @@ public class LoginBean {
     
     
    public String loginValidation(){       
-       System.out.println("UM" + user);       
        boolean isThere = loginEJBLocal.loginValidation(user, password);
        if(isThere == true){
-           return "/protecao.xhtml";
+           return "/localData.xhtml";
        }
        else{
            return "/identificarUsuario.xhtml";

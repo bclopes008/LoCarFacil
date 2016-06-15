@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+            <ul class="nav navbar-nav" >               
+                
+                <li><a href="localData.xhtml">Alugue um Carro</a></li>
+                <li><a href="minhaArea.xhtml">Minha Área</a></li>
+                <li><a href="listagemProdutos.xhtml">Grupo de Carros</a></li> 
+                <li><a href="pesquisarLojas.xhtml">Pesquisar Lojas</a></li>
+                <li><a href="#">Devolver Aluguel</a></li> 							
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="identificarUsuario.xhtml"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>-->
+                <span class="glyphicon glyphicon-log-in"><h:commandButton class="glyphicon glyphicon-log-in" value="Logout" action="#{sessaoBean.logout()}"/></span>
+                Bem vindo "#{sessaoBean.session}"
+            </ul>
+        
+    </h:body>
+</html>
+

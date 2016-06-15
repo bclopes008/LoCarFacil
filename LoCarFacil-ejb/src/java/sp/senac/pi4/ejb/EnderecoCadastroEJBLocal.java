@@ -13,5 +13,5 @@ import javax.ejb.Local;
  */
 @Local
 public interface EnderecoCadastroEJBLocal {
-    public boolean addressRegister(String cep, String street, String compl, String city, String streetType, String number, String neigh, String state);
+    public boolean addressRegister(String cep, String street, String compl, String city, String streetType, String number, String neigh, String state, int idPerson);
 }

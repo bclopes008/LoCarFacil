@@ -20,14 +20,13 @@ import sp.senac.pi4.ejb.Entities.Usuario;
 public class UsuarioCadastroEJB implements UsuarioCadastroEJBLocal {
 
     @Override
-    public boolean userRegister(String userLogin, String password, String passwordConfirmation){
+    public boolean userRegister(String userLogin, String password, String passwordConfirmation, int userId){
         if(password.equals(passwordConfirmation)){
             Usuario user = new Usuario();
             UsuarioDAO userDAO = new UsuarioDAO();
             user.setLoginuser(userLogin);
             user.setSenha(password);
-            user.setIdpessoa(2);
-            System.out.println("Chegou aqui");
+            user.setIdpessoa(userId);
             return userDAO.userRegister(user);
         }
         else{

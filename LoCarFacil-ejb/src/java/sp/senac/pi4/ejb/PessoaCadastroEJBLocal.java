@@ -14,5 +14,5 @@ import javax.ejb.Local;
  */
 @Local
 public interface PessoaCadastroEJBLocal {
-    public boolean personRegister(String name, String cpf, String celPhone, String email, char genre, Date dateBirth);    
+    public int personRegister(String name, String cpf, String celPhone, String email, char genre, Date dateBirth);    
 }

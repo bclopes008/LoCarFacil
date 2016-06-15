@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <meta charset="UTF-8"/>
@@ -29,18 +30,21 @@
                             <h:form>
                             <!--Menu Normal-->	
                             <div class="menuNavNormal">
-                                <ul class="nav navbar-nav" >
-                                    <li><a href="protecao.html">Alugue um Carro</a></li>
-                                    <li><a href="#">Minha Área</a></li>
-                                    <li><a href="listagemProdutos.html">Grupo de Carros</a></li> 
-                                    <li><a href="#">Pesquisar Lojas</a></li>
-                                    <li><a href="#">Devolver Aluguel</a></li> 							
-                                    
-                                </ul>
-
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="identificarUsuario.xhtml"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                </ul>
+                       
+                                <c:choose>
+                                    <c:when test="#{sessaoBean.session != null}">
+                                        <ui:insert>
+                                            <ui:include src="menuOn.xhtml"/>
+                                        </ui:insert>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <ui:insert>
+                                            <ui:include src="menuOff.xhtml"/>
+                                        </ui:insert>
+                                    </c:otherwise>
+                                </c:choose>
+                                
+                                
                             </div>
                             <!--Menu Small-->	
                             <div class="btn-group menuNavSmall">

@@ -20,7 +20,7 @@ import sp.senac.pi4.ejb.Entities.Pessoa;
 public class PessoaCadastroEJB implements PessoaCadastroEJBLocal {
     
 @Override
-public boolean personRegister(String name, String cpf, String celPhone, String email, char genre, Date dateBirth){
+public int personRegister(String name, String cpf, String celPhone, String email, char genre, Date dateBirth){
     System.out.println("veio");
     Pessoa person = new Pessoa();
     PessoaDAO personDAO = new PessoaDAO();

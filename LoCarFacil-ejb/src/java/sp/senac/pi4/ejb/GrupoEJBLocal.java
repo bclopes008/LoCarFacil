@@ -7,20 +7,15 @@ package sp.senac.pi4.ejb;
 
 import java.util.List;
 import javax.ejb.Local;
-import sp.senac.pi4.ejb.Entities.Aluguel;
+import sp.senac.pi4.ejb.Entities.Grupo;
 
 /**
  *
- * @author vsantos
+ * @author b_c_l
  */
 @Local
-public interface AluguelEJBLocal {
+public interface GrupoEJBLocal {
     
-    public void cadastrarAluguel(Aluguel aluguel);
+    public List<Grupo> listar();
     
-    public void devolucaoAluguel(Aluguel aluguel);
-    
-    public void alterarAluguel(Aluguel aluguel);
-    
-    public List<Aluguel> listar();
 }

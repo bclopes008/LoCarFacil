@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author bruno.lopes
  */
-public class Aluguel {
+public class AluguelWeb {
     
     private int id;
     private String localizacaoRetirada;
@@ -37,7 +37,7 @@ public class Aluguel {
     private BigDecimal valorGrupo;
     private BigDecimal valTotalGrupo;
 
-    public Aluguel() {
+    public AluguelWeb() {
     }
 
     public int getId() {

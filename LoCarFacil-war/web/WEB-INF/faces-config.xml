@@ -70,6 +70,10 @@
             <to-view-id>/cadastroCliente.xhtml</to-view-id>
         </navigation-case>
         
+        <navigation-case>
+            <from-outcome>identificacaoAluguel</from-outcome>
+            <to-view-id>/identificacaoAluguel.xhtml</to-view-id>
+        </navigation-case>
          
     </navigation-rule>
    <!-- <managed-bean>

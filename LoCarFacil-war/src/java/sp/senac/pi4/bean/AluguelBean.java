@@ -24,6 +24,7 @@ import sp.senac.pi4.ejb.Entities.Filial;
 import sp.senac.pi4.ejb.Entities.Grupo;
 import sp.senac.pi4.ejb.FilialEJBLocal;
 import sp.senac.pi4.ejb.GrupoEJBLocal;
+import sp.senac.pi4.ejb.SessionContext;
 
 /**
  *
@@ -38,6 +39,8 @@ public class AluguelBean {
     private Filial filial;
     private Grupo grupo;
     
+    @EJB
+    private SessionContext sessionContext;    
     @EJB
     private AluguelEJBLocal aluguelEJB;
     @EJB
@@ -111,16 +114,25 @@ public class AluguelBean {
         this.aluguelWeb.setValorTotal(new BigDecimal(assElev + bbConf + cadBb + gps + vTotal));
         System.err.println(aluguelWeb.getValorTotal());
         
+        
         //Número aleatório
         Random gerador = new Random();
         do{
             this.aluguelWeb.setId(gerador.nextInt());
         }while (aluguelWeb.getId() < 1);
-        if (op == 0) {
-            return "protecao.xhtml?faces-redirect=true";
-        } else {
-            return "identificacaoAluguel.xhtml";
-        }
+        
+        
+            if (op == 0) {
+                return "protecao.xhtml?faces-redirect=true";
+            } else {
+                if(sessionContext.getAttribute("userName") != null){
+                    return "resumo.xhtml";
+                }
+                else{
+                    return "identificarUsuario.xhtml";
+                }
+            }
+        
     }
 
     public String novaReserva() {

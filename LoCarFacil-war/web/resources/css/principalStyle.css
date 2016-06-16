@@ -1,0 +1,213 @@
+@charset "UTF-8";
+body { overflow-x: hidden; }
+/*Inicio section ----------------------------------------------------------------------------------------------------------------*/
+section.section{
+    margin: -20px 0px 0px 0px;
+	padding:0px;	
+}
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {
+      width:100%;
+	  height:680px;
+      margin:auto;
+  }
+  section .carousel-caption{
+	  text-align:right;
+	  padding-left:50px;
+	 
+  }
+ section .h1Foto{
+	 font-size:38px;
+	 text-shadow:2px 2px rgba(0,0,0,0.4); 
+	 font-weight:bold;
+ }
+ section .pFoto{
+	  font-size:18px;
+	  font-weight:bold;
+ }
+ section .pFotoButton{
+	 font-size:24px;
+	 color:yellow;
+	 text-shadow:2px 2px rgba(0,0,0,0.4); 
+	 background-color:#0047b3;
+	 display:inline-block;
+	 padding:5px;
+	 border-radius:6px;
+	 border:1px solid rgba(0,0,0,0.4);
+ }
+section .h1Imagem1{
+	font-size:46px;
+ }
+section .pImagem2{
+	font-size:18px;
+}
+section .h1Imagem3{
+	font-size:46px;
+}
+section .h1Imagem4{
+	font-size:46px;
+ }
+section .h1Imagem5{
+	font-size:36px;
+ }
+section .h1Imagem6{
+	font-size:46px;
+ }
+section .pImagem6{
+	font-size:18px;
+}
+section .pImagem7{
+	font-size:16px;
+}
+/*Fim section--------------------------------------------------------------------------------------------------------------------*/
+
+/*Inicio do aside----------------------------------------------------------------------------------------------------------------*/
+
+aside.aside {
+	margin: 2px 0 2px 0;
+	padding:15px;
+	background-color:#0047b3;
+	border:1px solid rgba(0,0,0,0.2);
+	border-radius:20px;
+	color:white;
+	position:absolute;
+	top:140px;
+}
+/*Inicio dos Cabeçalhos */
+aside h1{
+	font-size:26px;
+	text-align:center;
+	height:40px;
+	font-weight:bold;
+	color:yellow;
+	margin-top:0px;
+}
+aside p.perguntas{
+	color:yellow;
+	font-size:18px;
+}
+
+/*Fim dos Cabeçalhos */
+
+div.perguntaRadio span{
+	font-size:17px;
+	margin-right:10px;
+}
+.perguntaRadio{
+	margin-bottom:10px;
+}
+aside .labelStyle{
+	font-size:16px;
+	font-weight:400;
+}
+.inputStyle,select{
+	border-radius:5px;
+	border:1px solid rgba(0,0,0,.4);
+	height:30px;
+}
+.horaRetira, .horaDevolucao{
+	color:rgba(0,0,0,0.7);
+}
+
+input[id="localRetira"],input[id="localDevolucao"]{
+	width:220px;
+	margin-bottom:10px;
+}
+input[id="dataRetira"],input[id="dataDevolucao"]{
+	width:140px;
+	margin-bottom:10px;
+}
+input[id="dataRetira"]{
+	margin-bottom:0px;
+}
+hr{
+	background-color:white;
+	color:white;
+	height:2px;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+/*Fim da aside-------------------------------------------------------------------------------------------------------------------*/
+/*Responsivo==============================================================================================================================*/
+@media(max-width:992px){
+/*Inicio do aside*/
+
+aside.aside {
+	margin: 2px 0 2px 0;
+	padding:15px;
+	background-color:#0047b3;
+	border:1px solid rgba(0,0,0,0.2);
+	border-radius:20px;
+	color:white;
+	position:initial;
+}
+/*Fim da aside*/
+
+/*Inicio section*/
+section.section{
+    margin: -20px 0px 0px 0px;
+	padding:0px;	
+}
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {
+      width:100%;
+	  height:auto;
+      margin:auto;
+  }
+  section .carousel-caption{
+	  text-align:initial;
+  }
+ section .h1Foto{
+	 font-size:38px;
+	 text-shadow:2px 2px rgba(0,0,0,0.4); 
+	 font-weight:bold;
+ }
+ section .pFoto{
+	  font-size:18px;
+	  font-weight:bold;
+ }
+ section .pFotoButton{
+	 font-size:18px;
+	 color:yellow;
+	 text-shadow:2px 2px rgba(0,0,0,0.4); 
+	 background-color:#0047b3;
+	 display:inline-block;
+	 padding:5px;
+	 border-radius:6px;
+	 border:1px solid rgba(0,0,0,0.4);
+ }
+section .h1Imagem1{
+	font-size:38px;
+ }
+section .h1Imagem2{
+	font-size:26px;
+}
+section .pImagem2{
+	font-size:14px;
+}
+section .h1Imagem3{
+	font-size:30px;
+}
+section .h1Imagem4{
+	font-size:30px;
+ }
+section .h1Imagem5{
+	font-size:30px;
+ }
+section .h1Imagem6{
+	font-size:30px;
+ }
+section .pImagem6{
+	font-size:14px;
+}
+section .h1Imagem7{
+	font-size:30px;
+}
+section .pImagem7{
+	font-size:14px;
+}
+
+}
+
+@media(max-width:768px){
+	
+}

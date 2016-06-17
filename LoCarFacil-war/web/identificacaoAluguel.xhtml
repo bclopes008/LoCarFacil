@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-6 botoesDir">
-                                <p:commandButton id="btSupDir" class="btn btn-primary" action="#{aluguelBean.resumo(1)}" value="Finalizar" ajax="false "/>
+                                <!--ALTERADO-->                                <p:commandButton id="btSupDir" class="btn btn-primary" action="#{aluguelBean.loginValidationRental()}" value="Finalizar" ajax="false "/>
                             </div>
 
                         </div>
@@ -83,10 +83,10 @@
                         <h:form>
                             <h:panelGrid columns="1">
                                 <h:outputLabel for="logimCadastro" value="Login"/>
-                                <h:inputText id="logimCadastro" value=""/>
+<!--ALTERADO-->                                <h:inputText id="logimCadastro" value="#{aluguelBean.user}"/>
                                 <h:outputLabel for="senhaCadastro" value="Senha"/>
-                                <h:inputSecret id="senhaCadastro" value=""/>
-                                <h:commandButton value="Entrar"/>
+<!--ALTERADO-->                                <h:inputSecret id="senhaCadastro" value="#{aluguelBean.password}"/>
+<!--ALTERADO-->                                <h:commandButton value="Entrar" action="#{aluguelBean.loginValidationRental}"/>
                             </h:panelGrid>
                             <div class="row">
 
@@ -115,7 +115,7 @@
 
                             <div class="col-md-6 col-sm-6 col-xs-6 botoesDir">
                                 <!--<p><a href="#"  id="btInfeDir" class="btn btn-primary" role="button">Proximo <span class="glyphicon glyphicon-menu-right"></span></a></p>-->
-                                <p:commandButton id="btInfeDir" class="btn btn-primary" action="#{aluguelBean.resumo(1)}" value="Finalizar" ajax="false "/>
+<!--ALTERADO-->                                <p:commandButton id="btInfeDir" class="btn btn-primary" action="#{aluguelBean.identifica(1)}" value="Finalizar" ajax="false "/>
 
                             </div>
 

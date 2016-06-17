@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
+import sp.senac.pi4.ejb.Entities.Carro;
 import sp.senac.pi4.ejb.Entities.Grupo;
 
 /**
@@ -18,7 +19,7 @@ import sp.senac.pi4.ejb.Entities.Grupo;
  */
 @Stateless
 public class GrupoEJB implements GrupoEJBLocal {
-
+    
     EntityManagerFactory emf;
     
     @Override
@@ -32,4 +33,13 @@ public class GrupoEJB implements GrupoEJBLocal {
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
+    @Override
+    public Carro getIdCarro() {
+        EntityManager em = emf.createEntityManager();
+        
+        Query q = em.createNativeQuery("SELECT Carro.* FROM Grupo "
+                + "INNER JOIN Carro ON Carro.IDCARRO = GRUPO.IDGRUPO", Carro.class);
+        
+        return (Carro) q.getSingleResult();
+    }
 }

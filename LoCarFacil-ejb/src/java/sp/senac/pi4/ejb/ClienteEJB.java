@@ -7,6 +7,7 @@ package sp.senac.pi4.ejb;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 //import javax.persistence.PersistenceContext;
 import sp.senac.pi4.ejb.Entities.Cliente;
 
@@ -32,6 +33,14 @@ public class ClienteEJB implements ClienteEJBLocal {
 
     @Override
     public void inativarCliente(Cliente cliente) {
+        em.detach(cliente);
+    }
+
+    @Override
+    public Cliente listarByName(String nome) {
+        Query q = em.createNamedQuery("Cliente.findByName", Cliente.class);
+        q.setParameter(1, nome);
         
+        return (Cliente) q.getSingleResult();
     }
 }

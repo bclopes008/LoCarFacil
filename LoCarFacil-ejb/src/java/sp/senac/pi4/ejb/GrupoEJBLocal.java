@@ -7,6 +7,7 @@ package sp.senac.pi4.ejb;
 
 import java.util.List;
 import javax.ejb.Local;
+import sp.senac.pi4.ejb.Entities.Carro;
 import sp.senac.pi4.ejb.Entities.Grupo;
 
 /**
@@ -17,5 +18,7 @@ import sp.senac.pi4.ejb.Entities.Grupo;
 public interface GrupoEJBLocal {
     
     public List<Grupo> listar();
+    
+    public Carro getIdCarro();
     
 }

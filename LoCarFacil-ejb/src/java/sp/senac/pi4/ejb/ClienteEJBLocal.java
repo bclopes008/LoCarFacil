@@ -21,4 +21,6 @@ public interface ClienteEJBLocal {
     
     public void inativarCliente(Cliente cliente);
     
+    public Cliente listarByName(String nome);
+    
 }

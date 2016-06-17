@@ -54,7 +54,7 @@ public class LoginBean {
    public String loginValidation(){       
        boolean isThere = loginEJBLocal.loginValidation(user, password);
        if(isThere == true){
-           return "/localData.xhtml";
+/*ALTERADO*/           return "/principal.xhtml";
        }
        else{
            return "/identificarUsuario.xhtml";

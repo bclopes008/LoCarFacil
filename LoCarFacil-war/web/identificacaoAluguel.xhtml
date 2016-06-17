@@ -64,7 +64,7 @@
                         <div class="row">
 
                             <div class="col-md-6 col-sm-6 col-xs-6 botoesEsq">
-                                <p:commandButton id="btSupEs" class="btn btn-primary" action="#{aluguelBean.escolherGrupo()}" value="Voltar" ajax="false "/>
+                                <p:commandButton id="btSupEs" class="btn btn-primary" action="#{aluguelBean.identifica(0)}" value="Voltar" ajax="false "/>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-6 botoesDir">
@@ -97,9 +97,7 @@
                                 </div>
 
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <h:outputLink id="linkCadastro" value="">
-                                        <h:outputText value="Cadastre-se"/>
-                                    </h:outputLink>
+                                    <a href="cadastroCliente.xhtml" id="linkCadastro">Cadastre-se</a>
                                 </div>
 
                             </div>
@@ -110,7 +108,7 @@
                         <div class="row">
 
                             <div class="col-md-6 col-sm-6 col-xs-6 botoesEsq">
-                                <p:commandButton id="btInfeEs" class="btn btn-primary" action="#{aluguelBean.escolherGrupo()}" value="Voltar" ajax="false "/>
+                                <p:commandButton id="btInfeEs" class="btn btn-primary" action="#{aluguelBean.identifica(0)}" value="Voltar" ajax="false "/>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-6 botoesDir">
@@ -129,11 +127,11 @@
 
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="thumbnail">
-                                <img src="resources/imagens/grupoA.png" alt="grupo A - Econômico" title="Grupo A - Econômico"/>
+                                <img src="#{aluguelBean.aluguel.img}" alt="#{aluguelBean.aluguel.grupo}" title="#{aluguelBean.aluguel.grupo}"/>
                                 <p class="infoIlustrativa">Imagem Ilustrativa</p>
                                 <div class="caption">
-                                    <h3><h:outputLabel value="#{aluguelBean.aluguel.grupo}"/></h3>
-                                    <p>Fiat Novo Uno 1.0 ou similar</p>
+                                    <h3>#{aluguelBean.aluguel.grupo}</h3>
+                                    <p>#{aluguelBean.aluguel.descricao}</p>
                                 </div>
                             </div>
                         </div>
@@ -237,14 +235,14 @@
                                 <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataRetirada}">
                                         <f:convertDateTime locale="pt-BR" 
                                                            pattern="dd/MM/yyyy" /></h:outputLabel></td>
-                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaRetirada}"/></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horarioRetirada}"/></td>
                             </tr>
                             <tr>
                                 <td class="tds tdEsquerda">Devolução</td>
                                 <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataDevolucao}">
                                         <f:convertDateTime locale="pt-BR" 
                                                            pattern="dd/MM/yyyy" /></h:outputLabel></td>
-                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaDevolucao}"/></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horarioDevolucao}"/></td>
                             </tr>
                         </table>
 

@@ -2,24 +2,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta charset="UTF-8"/>
-	<title>Principal</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        
+        <title>Principal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
         <h:outputStylesheet name="css/bootstrap.min.css" />
         <h:outputStylesheet name="css/principalStyle.css" />
         <h:outputStylesheet name="css/menuStyle.css" />
         <h:outputStylesheet name="css/rodapeStyle.css" />
         <h:outputScript name="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" library="js"/>
         <h:outputScript name="js/bootstrap.min.js" />
-        
-        
+
+
     </h:head>
     <h:body>
-       <ui:insert>
+        <ui:insert>
             <ui:include src="menu.xhtml"/>
         </ui:insert>
 
@@ -29,123 +32,115 @@
 
             <!--Aqui inicia a parte section -->
             <div class="row t">
-			
-			 
+
 
                 <section class="col-md-12 col-sm-12 col-xs-12 section">
 
-                   
-					<div id="fotosCarousel" class="carousel slide" data-ride="carousel">
-    
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="resources/imagens/imagem1.jpg" alt="Carro na estrada" title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem1">É só alugar e dirigir</h1>
-			<p class="pFotoButton">Faça já sua reserva</p>
-		</div>
-      </div>
 
-      <div class="item">
-        <img src="resources/imagens/imagem2.jpeg" alt="Mulher e filho no carro"  title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem2">LoCarFácil tem proteção para o seu veículo locado</h1>
-			<p class="pFoto pImagem2">Viaje tranquilo, garanta proteção para seu carro</p>
-			<p class="pFotoButton">Reserve já</p>
-		</div>
-      </div>
-	  
-	  <div class="item">
-        <img src="resources/imagens/Cachorro.png" alt="Cachorro na janela do carro"  title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem3">Aproveite cada momento de sua vida</h1>
-			<p class="pFotoButton">Faça já sua reserva</p>
-		</div>
-      </div>
-	  
-	   <div class="item">
-        <img src="resources/imagens/imagem4.jpg" alt="Carro Fiat Novo Uno" title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem4">Grupo A - Econômico, mais economia para você</h1>
-			<p class="pFotoButton">Reserve já</p>
-		</div>
-      </div>
-	  
-	  <!-- <div class="item">
-        <img src="resources/imagens/imagem5.png" alt="Familia no carro"  title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem5">Aproveite cada momento com quem você ama</h1>
-			<p class="pFotoButton">Faça já sua reserva</p>
-		</div>
-      </div>-->
-	  
-	   <div class="item">
-        <img src="resources/imagens/imagem6.png" alt="Carro HB20s" title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem6">HB20s agora na LoCarFácil</h1>
-			<p class="pFoto pImagem6">Mais um carro em nossa frota para você usar quando e onde quiser.</p>
-			<p class="pFotoButton">Reserve já</p>
-		</div>
-      </div>
-	  
-	  <div class="item">
-        <img src="resources/imagens/imagem7.jpg" alt="Familia feliz dentro do carro" title="Alugue já, seu automóvel"/>
-		<div class="carousel-caption">
-			<h1 class="h1Foto h1Imagem7">Na LoCarFácil tem acessórios para sua comodidade</h1>
-			<p class="pFoto pImagem7">Garanta mais segurança e comodidade para você com nossos acessórios.</p>
-			<p class="pFotoButton">Reserve já</p>
-		</div>
-      </div>
-	  
+                    <div id="fotosCarousel" class="carousel slide" data-ride="carousel">
+                        <a href="localData.xhtml">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="resources/imagens/imagem1.jpg" alt="Carro na estrada" title="Alugue já, seu automóvel"/>
+                                    <div class="carousel-caption">
+                                        <h1 class="h1Foto h1Imagem1">É só alugar e dirigir</h1>
+                                        <p class="pFotoButton">Faça já sua reserva</p>
+                                    </div>
+                                </div>
 
-    </div>
+                                <div class="item">
+                                    <img src="resources/imagens/imagem2.jpeg" alt="Mulher e filho no carro"  title="Alugue já, seu automóvel"/>
+                                    <div class="carousel-caption">
+                                        <h1 class="h1Foto h1Imagem2">LoCarFácil tem proteção para o seu veículo locado</h1>
+                                        <p class="pFoto pImagem2">Viaje tranquilo, garanta proteção para seu carro</p>
+                                        <p class="pFotoButton">Reserve já</p>
+                                    </div>
+                                </div>
 
-    <!-- controle de direita e esquerda -->
-    <a class="left carousel-control" href="#fotosCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="right carousel-control" href="#fotosCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Proximo</span>
-    </a>
-	</div>
-  
+                                <div class="item">
+                                    <img src="resources/imagens/Cachorro.png" alt="Cachorro na janela do carro"  title="Alugue já, seu automóvel"/>
+                                    <div class="carousel-caption">
+                                        <h1 class="h1Foto h1Imagem3">Aproveite cada momento de sua vida</h1>
+                                        <p class="pFotoButton">Faça já sua reserva</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="resources/imagens/imagem4.jpg" alt="Carro Fiat Novo Uno" title="Alugue já, seu automóvel"/>
+                                    <div class="carousel-caption">
+                                        <h1 class="h1Foto h1Imagem4">Grupo A - Econômico, mais economia para você</h1>
+                                        <p class="pFotoButton">Reserve já</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="resources/imagens/imagem6.png" alt="Carro HB20s" title="Alugue já, seu automóvel"/>
+                                    <div class="carousel-caption">
+                                        <h1 class="h1Foto h1Imagem6">HB20s agora na LoCarFácil</h1>
+                                        <p class="pFoto pImagem6">Mais um carro em nossa frota para você usar quando e onde quiser.</p>
+                                        <p class="pFotoButton">Reserve já</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="resources/imagens/imagem7.jpg" alt="Familia feliz dentro do carro" title="Alugue já, seu automóvel"/>
+                                    <div class="carousel-caption">
+                                        <h1 class="h1Foto h1Imagem7">Na LoCarFácil tem acessórios para sua comodidade</h1>
+                                        <p class="pFoto pImagem7">Garanta mais segurança e comodidade para você com nossos acessórios.</p>
+                                        <p class="pFotoButton">Reserve já</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- controle de direita e esquerda -->
+                            <a class="left carousel-control" href="#fotosCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="right carousel-control" href="#fotosCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Proximo</span>
+                            </a>
+                        </a>
+                    </div>
+
 
                 </section>
-				
 
-            
-              
+
+
+
             </div>
 
 
         </div>
-		
-		
-		
-		
-		<div class="container-fluid lateralAluguel">
-				<div class="row">
-				<!--Parte Lateral-->
-                <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12 aside">
-				
-				 <h1>Alugue um Carro</h1>
 
-                    <form action="#" method="POST" >
-						
-						 <hr/>
-						<p class="perguntas">Onde?</p>
-                       
+
+
+
+        <div class="container-fluid lateralAluguel">
+            <div class="row">
+                <!--Parte Lateral-->
+                <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12 aside">
+
+                    <h1>Alugue um Carro</h1>
+
+                    <h:form>
+
+                        <hr/>
+                        <p class="perguntas">Onde?</p>
+
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <label for="localRetira" class="labelStyle">Local de Retirada</label><br/>
-                                <input type="text" id="localRetira" class="inputStyle" required="required" title="Local de Retirada do Automóvel" placeholder="Digite o local de Retirada"/>
+                                <h:inputText value="#{aluguelBean.aluguel.localizacaoRetirada}" id="localRetira" class="inputStyle" required="true" title="Local de Retirada do Automóvel" pt:placeholder="Digite o local de Retirada"/>
                             </div>
                         </div>
-						
-						
-						 <div class="row perguntaRadio">
+
+
+                        <div class="row perguntaRadio">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <span>Devolução em outra loja?</span>
 
@@ -154,86 +149,123 @@
                                 <input type="radio" name="escolha" id="nao"/><label for="nao">Não </label>
                             </div>
                         </div>
-						
-						<div class="row">
+
+                        <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <label for="localDevolucao" class="labelStyle">Local de Devolução</label><br/>
-                                <input type="text" id="localDevolucao" class="inputStyle" required="required" title="Local de Devolução do Automóvel" placeholder="Digite o local de Devolução"/>
+                                <h:inputText value="#{aluguelBean.aluguel.localizacaoDevolucao}" id="localDevolucao" class="inputStyle" title="Local de Devolução do Automóvel" pt:placeholder="Digite o local de Devolução"/>
                             </div>
                         </div>
-                       
 
-						<hr/>
-						<p class="perguntas">Quando?</p>
+
+                        <hr/>
+                        <p class="perguntas">Quando?</p>
                         <div class="row">
-						
+
                             <div class="col-md-6 col-sm-6 col-xs-12">
-							
+
                                 <span class="labelStyle">Data de Retirada</span><br/>
-                                <input type="date" id="dataRetira" class="inputStyle" required="required" title="Data de Retirada"/>
+                                <p:calendar value="#{aluguelBean.aluguel.dataRetirada}" id="dataRetira" class="inputStyle" required="true" title="Data de Retirada"/>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <span class="labelStyle">Hora da Retirada</span><br/>          
-                                <select class="horaRetira" required="required" title="Hora da Retirada">
-                                    <option  selected="selected" value="" disabled="disabled">__</option>
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>03</option>
-                                    <option>04</option>
-
-                                </select>
-								 <select class="horaRetira" required="required" title="Hora da Retirada">
-                                    <option  selected="selected" value="" disabled="disabled">__</option>
-                                    <option>00</option>
-                                    <option>30</option>
-                                </select>
+                                <span class="labelStyle">Hora da Retirada</span><br/>    
+                                <h:selectOneMenu class="horaRetira" value="#{aluguelBean.aluguel.horaRetirada}" id="horaRetirada" title="Hora da Retirada">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="01" itemLabel="01"/>
+                                    <f:selectItem itemValue="02" itemLabel="02"/>
+                                    <f:selectItem itemValue="03" itemLabel="03"/>
+                                    <f:selectItem itemValue="04" itemLabel="04"/>
+                                    <f:selectItem itemValue="05" itemLabel="05"/>
+                                    <f:selectItem itemValue="06" itemLabel="06"/>
+                                    <f:selectItem itemValue="07" itemLabel="07"/>
+                                    <f:selectItem itemValue="08" itemLabel="08"/>
+                                    <f:selectItem itemValue="09" itemLabel="09"/>
+                                    <f:selectItem itemValue="10" itemLabel="10"/>
+                                    <f:selectItem itemValue="11" itemLabel="11"/>
+                                    <f:selectItem itemValue="12" itemLabel="12"/>
+                                    <f:selectItem itemValue="13" itemLabel="13"/>
+                                    <f:selectItem itemValue="14" itemLabel="14"/>
+                                    <f:selectItem itemValue="15" itemLabel="15"/>
+                                    <f:selectItem itemValue="16" itemLabel="16"/>
+                                    <f:selectItem itemValue="17" itemLabel="17"/>
+                                    <f:selectItem itemValue="18" itemLabel="18"/>
+                                    <f:selectItem itemValue="19" itemLabel="19"/>
+                                    <f:selectItem itemValue="20" itemLabel="20"/>
+                                    <f:selectItem itemValue="21" itemLabel="21"/>
+                                    <f:selectItem itemValue="22" itemLabel="22"/>
+                                    <f:selectItem itemValue="23" itemLabel="23"/>
+                                </h:selectOneMenu>
+                                <h:selectOneMenu class="horaRetira" value="#{aluguelBean.aluguel.minRetirada}" id="minRetirada" title="Hora da Devolução">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="30" itemLabel="30"/>
+                                </h:selectOneMenu>
                             </div>
                         </div><br/>
 
-                  
-						<hr/>
-						<p class="perguntas">Até Quando?</p>
+
+                        <hr/>
+                        <p class="perguntas">Até Quando?</p>
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <span class="labelStyle">Data de Devolução</span><br/>
-                                <input type="date" id="dataDevolucao" class="inputStyle" required="required" title="Data de Devolução"/>
+                                <p:calendar value="#{aluguelBean.aluguel.dataDevolucao}" id="dataDevolucao" class="inputStyle" required="true" title="Data de Devolução"/>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <span class="labelStyle">Hora da Devolução</span><br/>
-                                <select class="horaDevolucao" required="required" title="Hora da Devolução">
-                                       <option  selected="selected" value="" disabled="disabled">__</option>
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>03</option>
-                                    <option>04</option>
-
-                                </select>
-								 <select class="horaDevolucao" required="required" title="Hora da Devolução">
-                                     <option  selected="selected" value="" disabled="disabled">__</option>
-                                    <option>00</option>
-                                    <option>30</option>
-
-                                </select>
+                                <h:selectOneMenu class="horaDevolucao" value="#{aluguelBean.aluguel.horaDevolucao}" id="horaDevolucao" title="Hora da Devolução">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="01" itemLabel="01"/>
+                                    <f:selectItem itemValue="02" itemLabel="02"/>
+                                    <f:selectItem itemValue="03" itemLabel="03"/>
+                                    <f:selectItem itemValue="04" itemLabel="04"/>
+                                    <f:selectItem itemValue="05" itemLabel="05"/>
+                                    <f:selectItem itemValue="06" itemLabel="06"/>
+                                    <f:selectItem itemValue="07" itemLabel="07"/>
+                                    <f:selectItem itemValue="08" itemLabel="08"/>
+                                    <f:selectItem itemValue="09" itemLabel="09"/>
+                                    <f:selectItem itemValue="10" itemLabel="10"/>
+                                    <f:selectItem itemValue="11" itemLabel="11"/>
+                                    <f:selectItem itemValue="12" itemLabel="12"/>
+                                    <f:selectItem itemValue="13" itemLabel="13"/>
+                                    <f:selectItem itemValue="14" itemLabel="14"/>
+                                    <f:selectItem itemValue="15" itemLabel="15"/>
+                                    <f:selectItem itemValue="16" itemLabel="16"/>
+                                    <f:selectItem itemValue="17" itemLabel="17"/>
+                                    <f:selectItem itemValue="18" itemLabel="18"/>
+                                    <f:selectItem itemValue="19" itemLabel="19"/>
+                                    <f:selectItem itemValue="20" itemLabel="20"/>
+                                    <f:selectItem itemValue="21" itemLabel="21"/>
+                                    <f:selectItem itemValue="22" itemLabel="22"/>
+                                    <f:selectItem itemValue="23" itemLabel="23"/>
+                                </h:selectOneMenu>
+                                <h:selectOneMenu class="horaDevolucao" value="#{aluguelBean.aluguel.minDevolucao}" id="minDevolucao" title="Hora da Devolução">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="30" itemLabel="30"/>
+                                </h:selectOneMenu>
                             </div>
                         </div>	
-						 <div class="row">
+                        <div class="row">
 
                             <div class="col-md-12 col-sm-12 col-xs-12 botoesDir">
-                                <p><a href="escolherGrupo.html"  id="btInfeDir" class="btn btn-primary" role="button">Alugue aqui</a></p>
+                                <p:commandButton id="btInfeDir" class="btn btn-primary" action="#{aluguelBean.escolherGrupo()}" value="Alugue aqui" ajax="false "/>
                             </div>
 
                         </div>
 
-                    </form>
-				</aside>
-			<!--fim do aside-->
-				</div>
-				</div><!--hhhhhhhhhhhhhhhhhhhhh-->
-		
-				
-         <!--Inicio do Rodape-->
+                    </h:form>
+                </aside>
+                <!--fim do aside-->
+            </div>
+        </div><!--hhhhhhhhhhhhhhhhhhhhh-->
+
+
+        <!--Inicio do Rodape-->
         <ui:insert>
             <ui:include src="rodape.xhtml"/>
         </ui:insert>

@@ -21,6 +21,7 @@ import sp.senac.pi4.ejb.AluguelEJB;
 import sp.senac.pi4.ejb.AluguelEJBLocal;
 import sp.senac.pi4.ejb.ClienteEJBLocal;
 import sp.senac.pi4.ejb.Entities.Aluguel;
+import sp.senac.pi4.ejb.Entities.Carro;
 import sp.senac.pi4.ejb.Entities.Filial;
 import sp.senac.pi4.ejb.Entities.Grupo;
 import sp.senac.pi4.ejb.FilialEJBLocal;
@@ -69,11 +70,17 @@ public class AluguelBean {
     }
 
     public String escolherGrupo() {
+        this.aluguelWeb.setHorarioRetirada(this.aluguelWeb.getHoraRetirada() + ":" + this.aluguelWeb.getMinRetirada());
+        this.aluguelWeb.setHorarioDevolucao(this.aluguelWeb.getHoraDevolucao() + ":" + this.aluguelWeb.getMinDevolucao());
         return "escolherGrupo";
     }
 
-    public String carroSelecionado(String grupo, double valorGrupo) {
+    public String carroSelecionado(int id, String grupo, String descricao, double valorGrupo, String img) {
+    //public String carroSelecionado(String grupo, double valorGrupo) {
+        this.aluguelWeb.setIdGrupo(id);
         this.aluguelWeb.setGrupo(grupo);
+        this.aluguelWeb.setDescricao(descricao);
+        this.aluguelWeb.setImg(img);
         this.aluguelWeb.setValorGrupo(new BigDecimal(valorGrupo));
         //parei aqui
         SimpleDateFormat fmt = new SimpleDateFormat("dd/MM/yyyy");
@@ -130,10 +137,11 @@ public class AluguelBean {
         do {
             this.aluguelWeb.setId(gerador.nextInt());
         } while (aluguelWeb.getId() < 1);
-        aluguel.setIdcarro(grupoEJB.getIdCarro());
+        /*Carro carro = new Carro(aluguelWeb.getIdGrupo());
+        aluguel.setIdcarro(carro);
         aluguel.setIdcliente(clienteEJB.listarByName(user));
         aluguel.setDataentrega(aluguelWeb.getDataDevolucao());
-        aluguel.setDataretirada(aluguelWeb.getDataRetirada());
+        aluguel.setDataretirada(aluguelWeb.getDataRetirada());*/
         return "resumo.xhtml";
     }
 
@@ -158,7 +166,7 @@ public class AluguelBean {
 
     public String cadastrarAluguel() {
         aluguelEJB.cadastrarAluguel(aluguel);
-        return "resumo.xhtml";
+        return "resumo";
     }
 
     public List<Grupo> getGrupos() {

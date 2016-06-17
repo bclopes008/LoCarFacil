@@ -78,8 +78,6 @@
 
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <!--<label for="localRetira" class="labelStyle">Localização</label><br/>
-                                <input type="text" id="localRetira" class="inputStyle" required="required" title="Local de Retirada do Automóvel" placeholder="Digite o local de retirada do Veiculo"/>-->
                                 <h:outputLabel for="localRetira" class="labelStyle" value="Localização"/><br/>
                                 <h:inputText value="#{aluguelBean.aluguel.localizacaoRetirada}" id="localRetira" class="inputStyle" required="true" title="Local de Retirada do Automóvel"/>
                             </div>
@@ -87,49 +85,43 @@
 
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <!--<span class="labelStyle">Data de Retirada</span><br/>
-                                <input type="date" id="dataRetira" class="inputStyle" required="required" title="Data de Retirada"/>-->
                                 <h:outputLabel class="labelStyle" value="Data de Retirada"/><br/>
                                 <p:calendar value="#{aluguelBean.aluguel.dataRetirada}" id="dataRetira" class="inputStyle" required="true" title="Data de Retirada"/>
                             </div>
 
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <span class="labelStyle">Hora da Retirada</span><br/>          
-                                <!--<select id="horaRetira" required="required" title="Hora da Retirada">
-                                    <option  selected="selected" value="" disabled="disabled">_:_</option>
-                                    <option>00:00</option>
-                                    <option>00:30</option>
-                                    <option>01:00</option>
-                                    <option>01:30</option>
-
-                                </select>-->
-                                <!--<select id="horaRetira" required="required" title="Hora da Retirada">-->
-                                <h:selectOneMenu value="#{aluguelBean.aluguel.horaRetirada}" id="horaRetira" title="Hora da Retirada">
-                                    <f:selectItem itemLabel="__:__"/>
-                                    <f:selectItem itemValue="00:00" itemLabel="00:00"/>
-                                    <f:selectItem itemValue="01:30" itemLabel="01:00"/>
-                                    <f:selectItem itemValue="02:00" itemLabel="02:00"/>
-                                    <f:selectItem itemValue="03:00" itemLabel="03:00"/>
-                                    <f:selectItem itemValue="04:00" itemLabel="04:00"/>
-                                    <f:selectItem itemValue="05:00" itemLabel="05:00"/>
-                                    <f:selectItem itemValue="06:00" itemLabel="06:00"/>
-                                    <f:selectItem itemValue="07:00" itemLabel="07:00"/>
-                                    <f:selectItem itemValue="08:00" itemLabel="08:00"/>
-                                    <f:selectItem itemValue="09:00" itemLabel="09:00"/>
-                                    <f:selectItem itemValue="10:00" itemLabel="10:00"/>
-                                    <f:selectItem itemValue="11:00" itemLabel="11:00"/>
-                                    <f:selectItem itemValue="12:00" itemLabel="12:00"/>
-                                    <f:selectItem itemValue="13:00" itemLabel="13:00"/>
-                                    <f:selectItem itemValue="14:00" itemLabel="14:00"/>
-                                    <f:selectItem itemValue="15:00" itemLabel="15:00"/>
-                                    <f:selectItem itemValue="16:00" itemLabel="16:00"/>
-                                    <f:selectItem itemValue="17:00" itemLabel="17:00"/>
-                                    <f:selectItem itemValue="18:00" itemLabel="18:00"/>
-                                    <f:selectItem itemValue="19:00" itemLabel="19:00"/>
-                                    <f:selectItem itemValue="20:00" itemLabel="20:00"/>
-                                    <f:selectItem itemValue="21:00" itemLabel="21:00"/>
-                                    <f:selectItem itemValue="22:00" itemLabel="22:00"/>
-                                    <f:selectItem itemValue="23:00" itemLabel="23:00"/>
+                                <h:selectOneMenu class="horaRetira" value="#{aluguelBean.aluguel.horaRetirada}" id="horaRetirada" title="Hora da Retirada">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="01" itemLabel="01"/>
+                                    <f:selectItem itemValue="02" itemLabel="02"/>
+                                    <f:selectItem itemValue="03" itemLabel="03"/>
+                                    <f:selectItem itemValue="04" itemLabel="04"/>
+                                    <f:selectItem itemValue="05" itemLabel="05"/>
+                                    <f:selectItem itemValue="06" itemLabel="06"/>
+                                    <f:selectItem itemValue="07" itemLabel="07"/>
+                                    <f:selectItem itemValue="08" itemLabel="08"/>
+                                    <f:selectItem itemValue="09" itemLabel="09"/>
+                                    <f:selectItem itemValue="10" itemLabel="10"/>
+                                    <f:selectItem itemValue="11" itemLabel="11"/>
+                                    <f:selectItem itemValue="12" itemLabel="12"/>
+                                    <f:selectItem itemValue="13" itemLabel="13"/>
+                                    <f:selectItem itemValue="14" itemLabel="14"/>
+                                    <f:selectItem itemValue="15" itemLabel="15"/>
+                                    <f:selectItem itemValue="16" itemLabel="16"/>
+                                    <f:selectItem itemValue="17" itemLabel="17"/>
+                                    <f:selectItem itemValue="18" itemLabel="18"/>
+                                    <f:selectItem itemValue="19" itemLabel="19"/>
+                                    <f:selectItem itemValue="20" itemLabel="20"/>
+                                    <f:selectItem itemValue="21" itemLabel="21"/>
+                                    <f:selectItem itemValue="22" itemLabel="22"/>
+                                    <f:selectItem itemValue="23" itemLabel="23"/>
+                                </h:selectOneMenu>
+                                <h:selectOneMenu class="horaRetira" value="#{aluguelBean.aluguel.minRetirada}" id="minRetirada" title="Hora da Devolução">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="30" itemLabel="30"/>
                                 </h:selectOneMenu>
                             </div>
                         </div><br/>
@@ -152,8 +144,6 @@
 
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <!--<label for="localDevolucao" class="labelStyle">Localização</label><br/>
-                                <input type="text" id="localDevolucao" class="inputStyle" required="required" title="Local de Devolução do Automóvel" placeholder="Digite o local de Devolução do Veiculo"/>-->
                                 <h:outputLabel for="localDevolucao" class="labelStyle" value="Localização"/><br/>
                                 <h:inputText value="#{aluguelBean.aluguel.localizacaoDevolucao}" id="localDevolucao" class="inputStyle" title="Local de Devolução do Automóvel"/>
                             </div>
@@ -161,48 +151,43 @@
 
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-12">
-                                <!--<span class="labelStyle">Data de Devolução</span><br/>
-                                <input type="date" id="dataDevolucao" class="inputStyle" required="required" title="Data de Devolução"/>-->
                                 <h:outputLabel class="labelStyle" value="Data de Devolução"/><br/>
                                 <p:calendar value="#{aluguelBean.aluguel.dataDevolucao}" id="dataDevolucao" class="inputStyle" required="true" title="Data de Devolução"/>
                             </div>
 
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <span class="labelStyle">Hora da Devolução</span><br/>
-                                <!--<select id="horaDevolucao" required="required" title="Hora da Devolução">-->
-                                <!--<select id="horaDevolucao" title="Hora da Devolução">
-                                    <option  selected="selected" value="" disabled="disabled">_:_</option>
-                                    <option>00:00</option>
-                                    <option>00:30</option>
-                                    <option>01:00</option>
-                                    <option>01:30</option>
-                                </select>-->
-                                <h:selectOneMenu value="#{aluguelBean.aluguel.horaDevolucao}" id="horaDevolucao" title="Hora da Retirada">
-                                    <f:selectItem itemLabel="__:__"/>
-                                    <f:selectItem itemValue="00:00" itemLabel="00:00"/>
-                                    <f:selectItem itemValue="01:30" itemLabel="01:00"/>
-                                    <f:selectItem itemValue="02:00" itemLabel="02:00"/>
-                                    <f:selectItem itemValue="03:00" itemLabel="03:00"/>
-                                    <f:selectItem itemValue="04:00" itemLabel="04:00"/>
-                                    <f:selectItem itemValue="05:00" itemLabel="05:00"/>
-                                    <f:selectItem itemValue="06:00" itemLabel="06:00"/>
-                                    <f:selectItem itemValue="07:00" itemLabel="07:00"/>
-                                    <f:selectItem itemValue="08:00" itemLabel="08:00"/>
-                                    <f:selectItem itemValue="09:00" itemLabel="09:00"/>
-                                    <f:selectItem itemValue="10:00" itemLabel="10:00"/>
-                                    <f:selectItem itemValue="11:00" itemLabel="11:00"/>
-                                    <f:selectItem itemValue="12:00" itemLabel="12:00"/>
-                                    <f:selectItem itemValue="13:00" itemLabel="13:00"/>
-                                    <f:selectItem itemValue="14:00" itemLabel="14:00"/>
-                                    <f:selectItem itemValue="15:00" itemLabel="15:00"/>
-                                    <f:selectItem itemValue="16:00" itemLabel="16:00"/>
-                                    <f:selectItem itemValue="17:00" itemLabel="17:00"/>
-                                    <f:selectItem itemValue="18:00" itemLabel="18:00"/>
-                                    <f:selectItem itemValue="19:00" itemLabel="19:00"/>
-                                    <f:selectItem itemValue="20:00" itemLabel="20:00"/>
-                                    <f:selectItem itemValue="21:00" itemLabel="21:00"/>
-                                    <f:selectItem itemValue="22:00" itemLabel="22:00"/>
-                                    <f:selectItem itemValue="23:00" itemLabel="23:00"/>
+                                <h:selectOneMenu class="horaDevolucao" value="#{aluguelBean.aluguel.horaDevolucao}" id="horaDevolucao" title="Hora da Devolução">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="01" itemLabel="01"/>
+                                    <f:selectItem itemValue="02" itemLabel="02"/>
+                                    <f:selectItem itemValue="03" itemLabel="03"/>
+                                    <f:selectItem itemValue="04" itemLabel="04"/>
+                                    <f:selectItem itemValue="05" itemLabel="05"/>
+                                    <f:selectItem itemValue="06" itemLabel="06"/>
+                                    <f:selectItem itemValue="07" itemLabel="07"/>
+                                    <f:selectItem itemValue="08" itemLabel="08"/>
+                                    <f:selectItem itemValue="09" itemLabel="09"/>
+                                    <f:selectItem itemValue="10" itemLabel="10"/>
+                                    <f:selectItem itemValue="11" itemLabel="11"/>
+                                    <f:selectItem itemValue="12" itemLabel="12"/>
+                                    <f:selectItem itemValue="13" itemLabel="13"/>
+                                    <f:selectItem itemValue="14" itemLabel="14"/>
+                                    <f:selectItem itemValue="15" itemLabel="15"/>
+                                    <f:selectItem itemValue="16" itemLabel="16"/>
+                                    <f:selectItem itemValue="17" itemLabel="17"/>
+                                    <f:selectItem itemValue="18" itemLabel="18"/>
+                                    <f:selectItem itemValue="19" itemLabel="19"/>
+                                    <f:selectItem itemValue="20" itemLabel="20"/>
+                                    <f:selectItem itemValue="21" itemLabel="21"/>
+                                    <f:selectItem itemValue="22" itemLabel="22"/>
+                                    <f:selectItem itemValue="23" itemLabel="23"/>
+                                </h:selectOneMenu>
+                                <h:selectOneMenu class="horaDevolucao" value="#{aluguelBean.aluguel.minDevolucao}" id="minDevolucao" title="Hora da Devolução">
+                                    <f:selectItem itemLabel="__"/>
+                                    <f:selectItem itemValue="00" itemLabel="00"/>
+                                    <f:selectItem itemValue="30" itemLabel="30"/>
                                 </h:selectOneMenu>
                             </div>
                         </div>
@@ -213,7 +198,6 @@
                         <div class="row">
 
                             <div class="col-md-12 col-sm-12 col-xs-12 botoesDir">
-                                <!--<p><a href="escolherGrupo.html"  id="btInfeDir" class="btn btn-primary" role="button">Proximo <span class="glyphicon glyphicon-menu-right"></span></a></p>-->
                                 <p:commandButton id="btInfeDir" class="btn btn-primary" action="#{aluguelBean.escolherGrupo()}" value="Próximo" ajax="false "/>
                             </div>
 
@@ -229,21 +213,21 @@
 
                             <p:accordionPanel>
                                 <p:tab title="Termos e condições">
-                                    <h:outputText />
-                                        <!---value="Para alugar um veículo na LoCarFácil, você deverá:
-Apresentar um documento de identidade e CPF. A apresentação do RG ou CNH original que contenha o número do CPF dispensa a apresentação deste.
-Apresentar cartão de crédito nominal para a operação de pré-autorização e ter as suas informações aprovadas pela LoCarFácil.
-Para conduzir o veículo locado, deverá ser apresentada a Carteira de Habilitação válida e emitida em território nacional.
- 
-Caso o cliente não preencha o perfil exigido, poderá indicar um condutor. Neste caso, o cliente tem ciência e concorda que deverá abster-se de conduzir o veículo locado e que assumirá todas as responsabilidades pelos atos praticados pela pessoa por ele indicada.
-Em contratos em que o cliente, motorista adicional ou pessoa indicada tiverem a Carteira de Habilitação emitida há menos de 2 anos.
-A regra para locação de veículos a estrangeiros deve ser consultada na loja de retirada do veículo.<br/>
-
-Condições
-O período mínimo de locação é de 1 (uma) diária de 24 horas, e o período máximo são de 30 diárias. Caso o cliente queira permanecer com o veículo e ele não estiver reservado para outro cliente, após esse período o contrato será renovado automaticamente e a tarifa será cobrada de acordo com o novo período de utilização.
-Para locações entre 1 e 20 diárias, a quilometragem é livre. Para locações entre 21 e 30 diárias, é estipulado um limite de 4.500 quilômetros rodados para todo o período. Será cobrado o valor de R$ 0,45 para cada quilômetro excedido.
-A devolução em outra loja será permitida somente com a autorização da loja de origem e o pagamento da respectiva taxa de retorno.
-Caso o veículo do grupo escolhido no ato da reserva não esteja disponível no dia da retirada, a LoCarFácil disponibilizará outro veículo de um grupo superior. Nesse caso, os valores das diárias de locação e das diárias de proteção cobradas serão correspondentes ao veículo escolhido no ato da reserva e indisponível no momento da retirada."/>-->
+                                    <h:outputText
+                                        value="Para alugar um veículo na LoCarFácil, você deverá:
+                                        Apresentar um documento de identidade e CPF. A apresentação do RG ou CNH original que contenha o número do CPF dispensa a apresentação deste.
+                                        Apresentar cartão de crédito nominal para a operação de pré-autorização e ter as suas informações aprovadas pela LoCarFácil.
+                                        Para conduzir o veículo locado, deverá ser apresentada a Carteira de Habilitação válida e emitida em território nacional."/><!--
+                                         
+                                        Caso o cliente não preencha o perfil exigido, poderá indicar um condutor. Neste caso, o cliente tem ciência e concorda que deverá abster-se de conduzir o veículo locado e que assumirá todas as responsabilidades pelos atos praticados pela pessoa por ele indicada.
+                                        Em contratos em que o cliente, motorista adicional ou pessoa indicada tiverem a Carteira de Habilitação emitida há menos de 2 anos.
+                                        A regra para locação de veículos a estrangeiros deve ser consultada na loja de retirada do veículo.<br/>
+                                        
+                                        Condições
+                                        O período mínimo de locação é de 1 (uma) diária de 24 horas, e o período máximo são de 30 diárias. Caso o cliente queira permanecer com o veículo e ele não estiver reservado para outro cliente, após esse período o contrato será renovado automaticamente e a tarifa será cobrada de acordo com o novo período de utilização.
+                                        Para locações entre 1 e 20 diárias, a quilometragem é livre. Para locações entre 21 e 30 diárias, é estipulado um limite de 4.500 quilômetros rodados para todo o período. Será cobrado o valor de R$ 0,45 para cada quilômetro excedido.
+                                        A devolução em outra loja será permitida somente com a autorização da loja de origem e o pagamento da respectiva taxa de retorno.
+                                        Caso o veículo do grupo escolhido no ato da reserva não esteja disponível no dia da retirada, a LoCarFácil disponibilizará outro veículo de um grupo superior. Nesse caso, os valores das diárias de locação e das diárias de proteção cobradas serão correspondentes ao veículo escolhido no ato da reserva e indisponível no momento da retirada."/>-->
                                 </p:tab>
                                 <p><a href="">Termos e condições</a></p>
                             </p:accordionPanel>

@@ -186,11 +186,11 @@
 
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="thumbnail">
-                                <img src="resources/imagens/grupoA.png" alt="grupo A - Econômico" title="Grupo A - Econômico"/>
+                                <img src="#{aluguelBean.aluguel.img}" alt="#{aluguelBean.aluguel.grupo}" title="#{aluguelBean.aluguel.grupo}"/>
                                 <p class="infoIlustrativa">Imagem Ilustrativa</p>
                                 <div class="caption">
                                     <h3><h:outputLabel value="#{aluguelBean.aluguel.grupo}"/></h3>
-                                    <p>Fiat Novo Uno 1.0 ou similar</p>
+                                    <p>#{aluguelBean.aluguel.descricao}</p>
                                 </div>
                             </div>
                         </div>
@@ -294,14 +294,14 @@
                                 <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataRetirada}">
                                         <f:convertDateTime locale="pt-BR" 
                                                            pattern="dd/MM/yyyy" /></h:outputLabel></td>
-                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaRetirada}"/></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horarioRetirada}"/></td>
                             </tr>
                             <tr>
                                 <td class="tds tdEsquerda">Devolução</td>
                                 <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.dataDevolucao}">
                                         <f:convertDateTime locale="pt-BR" 
                                                            pattern="dd/MM/yyyy" /></h:outputLabel></td>
-                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horaDevolucao}"/></td>
+                                <td class="tds tdDireita"><h:outputLabel value="#{aluguelBean.aluguel.horarioDevolucao}"/></td>
                             </tr>
                         </table>
 

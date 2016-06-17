@@ -13,15 +13,22 @@ import java.util.Date;
  * @author bruno.lopes
  */
 public class AluguelWeb {
-    
+
     private int id;
     private String localizacaoRetirada;
     private Date dataRetirada;
     private String horaRetirada;
+    private String minRetirada;
+    private String horarioRetirada;
     private String localizacaoDevolucao;
     private Date dataDevolucao;
     private String horaDevolucao;
+    private String minDevolucao;
+    private String horarioDevolucao;
+    private int idGrupo;
     private String grupo;
+    private String descricao;
+    private String img;
     private boolean protecao;
     private int bbConf = 0;
     private int assElev = 0;
@@ -72,6 +79,14 @@ public class AluguelWeb {
         this.horaRetirada = horaRetirada;
     }
 
+    public String getMinRetirada() {
+        return minRetirada;
+    }
+
+    public void setMinRetirada(String minRetirada) {
+        this.minRetirada = minRetirada;
+    }
+
     public String getLocalizacaoDevolucao() {
         return localizacaoDevolucao;
     }
@@ -94,6 +109,14 @@ public class AluguelWeb {
 
     public void setHoraDevolucao(String horaDevolucao) {
         this.horaDevolucao = horaDevolucao;
+    }
+
+    public String getMinDevolucao() {
+        return minDevolucao;
+    }
+
+    public void setMinDevolucao(String minDevolucao) {
+        this.minDevolucao = minDevolucao;
     }
 
     public String getGrupo() {
@@ -214,6 +237,45 @@ public class AluguelWeb {
 
     public void setDias(int dias) {
         this.dias = dias;
-    }   
-    
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public int getIdGrupo() {
+        return idGrupo;
+    }
+
+    public void setIdGrupo(int idGrupo) {
+        this.idGrupo = idGrupo;
+    }
+
+    public String getHorarioRetirada() {
+        return horarioRetirada;
+    }
+
+    public void setHorarioRetirada(String horarioRetirada) {
+        this.horarioRetirada = horarioRetirada;
+    }
+
+    public String getHorarioDevolucao() {
+        return horarioDevolucao;
+    }
+
+    public void setHorarioDevolucao(String horarioDevolucao) {
+        this.horarioDevolucao = horarioDevolucao;
+    }
 }

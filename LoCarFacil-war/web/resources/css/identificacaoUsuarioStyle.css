@@ -1,5 +1,25 @@
+
 /* 
     Created on : 29/05/2016, 20:10:30
     Author     : Fabio
 */
-
+legend{
+    font-size: 28px;
+    font-weight: bold;
+}
+fieldset{
+    height: 500px;
+}
+.inputInde{
+    
+    margin-bottom: 15px;
+}
+.buttonEnviar{
+    
+    background-color: #0047b3;
+    color:white;
+    border: none;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}

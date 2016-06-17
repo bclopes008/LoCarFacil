@@ -137,11 +137,11 @@ public class AluguelBean {
         do {
             this.aluguelWeb.setId(gerador.nextInt());
         } while (aluguelWeb.getId() < 1);
-        /*Carro carro = new Carro(aluguelWeb.getIdGrupo());
+        Carro carro = new Carro(aluguelWeb.getIdGrupo());
         aluguel.setIdcarro(carro);
         aluguel.setIdcliente(clienteEJB.listarByName(user));
         aluguel.setDataentrega(aluguelWeb.getDataDevolucao());
-        aluguel.setDataretirada(aluguelWeb.getDataRetirada());*/
+        aluguel.setDataretirada(aluguelWeb.getDataRetirada());
         return "resumo.xhtml";
     }
 

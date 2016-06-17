@@ -15,7 +15,7 @@
         <h:outputStylesheet name="css/rodapeStyle.css" />
         <h:outputScript name="js/bootstrap.min.js" />
     </h:head>
-    <h:body>
+   <h:body>
         <ui:insert>
             <ui:include src="menu.xhtml"/>
         </ui:insert>
@@ -29,54 +29,77 @@
                     </div>
                     <h:form>
                         <fieldset>
-                            <legend>Dados Pessoais</legend>
-                            <h:panelGrid columns="4">
-                                <h:outputLabel for="nomeCadastro" value="Nome Completo*"/>
-                                <h:inputText id="nomeCadastro" value="#{cadastroPerfil.name}"/>
+                            <legend class="legend">Dados Pessoais</legend>
 
-                                <h:outputLabel for="cpfCadastro" value="CPF*"/>
-                                <h:inputText id="cpfCadastro" value="#{cadastroPerfil.cpf}"/>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="nomeCadastro" value="Nome Completo*"/>
+                                    <h:inputText id="nomeCadastro" value="#{cadastroPerfil.name}" class="inputcadastro"/>
+                                </div>
 
-                                <h:outputLabel for="dataNasCadastro" value="Data de Nascimento*"/>
-                                <h:inputText id="dataNasCadastro"/>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="cpfCadastro" value="CPF*"/>
+                                    <h:inputText id="cpfCadastro" value="#{cadastroPerfil.cpf}" class="inputcadastro"/>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="#" value="Sexo*"/>
-                                <h:selectOneRadio value="#{cadastroPerfil.genre}" >
-                                    <f:selectItem itemValue="true" id="masc" itemLabel="Masculino"/>
-                                    <f:selectItem itemValue="false" id="femi" itemLabel="Feminino"/>
-                                </h:selectOneRadio>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="dataNasCadastro" value="Data de Nascimento*"/>
+                                    <h:inputText id="dataNasCadastro" class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="#" value="Sexo*"/>
+                                    <h:selectOneRadio value="#{cadastroPerfil.genre}" >
+                                        <f:selectItem itemValue="true" id="masc" itemLabel="Masculino"/>
+                                        <f:selectItem itemValue="false" id="femi" itemLabel="Feminino"/>
+                                    </h:selectOneRadio>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="emailCadastro" value="E-mail*"/>
-                                <h:inputText id="emailCadastro" value="#{cadastroPerfil.email}"/>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="emailCadastro" value="E-mail*"/>
+                                    <h:inputText id="emailCadastro" value="#{cadastroPerfil.email}" class="inputcadastro low"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="telCadastro" value="Tel.Celular*"/>
+                                    <h:inputText id="telCadastro" value="#{cadastroPerfil.celPhone}"  class="inputcadastro"/>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="telCadastro" value="Tel.Celular*"/>
-                                <h:inputText id="telCadastro" value="#{cadastroPerfil.celPhone}"/>
-
-                            </h:panelGrid>
                         </fieldset>
 
 
 
                         <fieldset>
                             <legend>Carteira Nacional de Habilitação</legend>
-                            <h:panelGrid columns="4">
-                                <h:outputLabel for="numeroHabilitacao" value="N° da Habilitação*"/>
-                                <h:inputText id="numeroHabilitacao"/>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="numeroHabilitacao" value="N° da Habilitação*"/>
+                                    <h:inputText id="numeroHabilitacao"  class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="registrooHabilitacao" value="N° de Registro*"/>
+                                    <h:inputText id="registrooHabilitacao"  class="inputcadastro"/>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="registrooHabilitacao" value="N° de Registro*"/>
-                                <h:inputText id="registrooHabilitacao"/>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="estadoHabilitação" value="Estado Emissor*"/>
+                                    <h:selectOneMenu value="#" id="estadoHabilitação" title="Estado Emissor"  class="inputcadastro">
+                                        <f:selectItem itemLabel="Selecione"/>
+                                        <f:selectItem itemValue="SP" itemLabel="SP"/>
+                                        <f:selectItem itemValue="RJ" itemLabel="RJ"/>
+                                    </h:selectOneMenu>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="validadeHabilitação" value="Validade*"/>
+                                    <h:inputText id="validadeHabilitação"  class="inputcadastro low"/>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="estadoHabilitação" value="Estado Emissor*"/>
-                                <h:selectOneMenu value="#" id="estadoHabilitação" title="Estado Emissor">
-                                    <f:selectItem itemLabel="Selecione"/>
-                                    <f:selectItem itemValue="SP" itemLabel="SP"/>
-                                    <f:selectItem itemValue="RJ" itemLabel="RJ"/>
-                                </h:selectOneMenu>
-
-                                <h:outputLabel for="validadeHabilitação" value="Validade*"/>
-                                <h:inputText id="validadeHabilitação"/>
-
-                            </h:panelGrid>
 
                         </fieldset>
 
@@ -84,62 +107,81 @@
 
                         <fieldset>
                             <legend>Endereço Residencial</legend>
-                            <h:panelGrid columns="4">
-                                <h:outputLabel for="cepEndereco" value="CEP*"/>
-                                <h:inputText id="cepEndereco" value="#{cadastroPerfil.cep}"/>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="cepEndereco" value="CEP*"/>
+                                    <h:inputText id="cepEndereco" value="#{cadastroPerfil.cep}"  class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="tipoEndereco" value="Tipo de Endereço*" />
+                                    <h:selectOneMenu value="#" id="tipoEndereco" title="Tipo de Endereço"  class="inputcadastro">
+                                        <f:selectItem itemLabel="Selecione"/>
+                                        <f:selectItem itemValue="Rua" itemLabel="Rua"/>
+                                        <f:selectItem itemValue="Praça" itemLabel="Praça"/>
+                                        <f:selectItem itemValue="Beco" itemLabel="Beco"/>
+                                        <f:selectItem itemValue="Alameda" itemLabel="Alameda"/>
+                                        <f:selectItem itemValue="Bloco" itemLabel="Bloco"/>
+                                        <f:selectItem itemValue="Estrada" itemLabel="Estrada"/>
+                                        <f:selectItem itemValue="Quadra" itemLabel="Quadra"/>
+                                        <f:selectItem itemValue="Rodovia" itemLabel="Rodovia"/>
+                                        <f:selectItem itemValue="Via" itemLabel="Via"/>
+                                        <f:selectItem itemValue="Vila" itemLabel="Vila"/>
+                                    </h:selectOneMenu>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="lograEndereco" value="Endereço*"/>
+                                    <h:inputText id="lograEndereco" value="#{cadastroPerfil.street}"  class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="numeroEndereco" value="Número*"/>
+                                    <h:inputText id="numeroEndereco" value="#{cadastroPerfil.number}"  class="inputcadastro"/>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="tipoEndereco" value="Tipo de Endereço*" />
-                                <h:selectOneMenu value="#" id="tipoEndereco" title="Tipo de Endereço">
-                                    <f:selectItem itemLabel="Selecione"/>
-                                    <f:selectItem itemValue="Rua" itemLabel="Rua"/>
-                                    <f:selectItem itemValue="Praça" itemLabel="Praça"/>
-                                    <f:selectItem itemValue="Beco" itemLabel="Beco"/>
-                                    <f:selectItem itemValue="Alameda" itemLabel="Alameda"/>
-                                    <f:selectItem itemValue="Bloco" itemLabel="Bloco"/>
-                                    <f:selectItem itemValue="Estrada" itemLabel="Estrada"/>
-                                    <f:selectItem itemValue="Quadra" itemLabel="Quadra"/>
-                                    <f:selectItem itemValue="Rodovia" itemLabel="Rodovia"/>
-                                    <f:selectItem itemValue="Via" itemLabel="Via"/>
-                                    <f:selectItem itemValue="Vila" itemLabel="Vila"/>
-                                </h:selectOneMenu>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="complementoEndereco" value="Complemento*"/>
+                                    <h:inputText id="complementoEndereco" value="#{cadastroPerfil.compl}"  class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="bairroEndereco" value="Bairro*"/>
+                                    <h:inputText id="bairroEndereco" value="#{cadastroPerfil.neigh}"  class="inputcadastro"/>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="lograEndereco" value="Endereço*"/>
-                                <h:inputText id="lograEndereco" value="#{cadastroPerfil.street}"/>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="cidadeEndereco" value="Cidade*"/>
+                                    <h:inputText id="cidadeEndereco" value="#{cadastroPerfil.city}"  class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="estadoEndereco" value="Estado(DF)*"/>
+                                    <h:selectOneMenu value="estadoEndereco" id="teste" title="Estado"  class="inputcadastro">
+                                        <f:selectItem itemLabel="Selecione"/>
+                                        <f:selectItem itemValue="SP" itemLabel="SP"/>
+                                        <f:selectItem itemValue="RJ" itemLabel="RJ"/>
+                                    </h:selectOneMenu>
+                                </div>
+                            </div>
 
-                                <h:outputLabel for="numeroEndereco" value="Número*"/>
-                                <h:inputText id="numeroEndereco" value="#{cadastroPerfil.number}"/>
-
-                                <h:outputLabel for="complementoEndereco" value="Complemento*"/>
-                                <h:inputText id="complementoEndereco" value="#{cadastroPerfil.compl}"/>
-
-                                <h:outputLabel for="bairroEndereco" value="Bairro*"/>
-                                <h:inputText id="bairroEndereco" value="#{cadastroPerfil.neigh}"/>
-
-                                <h:outputLabel for="cidadeEndereco" value="Cidade*"/>
-                                <h:inputText id="cidadeEndereco" value="#{cadastroPerfil.city}"/>
-
-                                <h:outputLabel for="estadoEndereco" value="Estado(DF)*"/>
-                                <h:selectOneMenu value="estadoEndereco" id="teste" title="Estado">
-                                    <f:selectItem itemLabel="Selecione"/>
-                                    <f:selectItem itemValue="SP" itemLabel="SP"/>
-                                    <f:selectItem itemValue="RJ" itemLabel="RJ"/>
-                                </h:selectOneMenu>
-
-                            </h:panelGrid>
 
                         </fieldset>
 
 
                         <fieldset>
                             <legend>Referência Pessoal</legend>
-                            <h:panelGrid columns="4">
-                                <h:outputLabel for="nomeReferencia" value="Nome da Referência*"/>
-                                <h:inputText id="nomeReferencia"/>
-
-                                <h:outputLabel for="telReferencia" value="Tel. da Referência*"/>
-                                <h:inputText id="telReferencia"/>
-
-                            </h:panelGrid>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="nomeReferencia" value="Nome da Referência*"/>
+                                    <h:inputText id="nomeReferencia"  class="inputcadastro"/>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <h:outputLabel for="telReferencia" value="Tel. da Referência*"/>
+                                    <h:inputText id="telReferencia"  class="inputcadastro"/>
+                                </div>
+                            </div>
 
                         </fieldset>
 
@@ -148,20 +190,21 @@
                             <legend>Cadastrar Login e Senha</legend>
                             <h:panelGrid columns="2">
                                 <h:outputLabel for="loginAutenticacao" value="Login*"/>
-                                <h:inputText id="loginAutenticacao" value="#{cadastroPerfil.user}" />
+                                <h:inputText id="loginAutenticacao" value="#{cadastroPerfil.user}"  class="inputcadastro"/>
 
                                 <h:outputLabel for="senhaAutenticacao" value="Senha*"/>
-                                <h:inputSecret id="senhaAutenticacao" value="#{cadastroPerfil.password}"/>
+                                <h:inputSecret id="senhaAutenticacao" value="#{cadastroPerfil.password}"  class="inputcadastro"/>
 
                                 <h:outputLabel for="conSenhaAutenticacao" value="Confirma Senha*"/>
-                                <h:inputSecret id="conSenhaAutenticacao" value="#{cadastroPerfil.passwordConfirmation}"/>
+                                <h:inputSecret id="conSenhaAutenticacao" value="#{cadastroPerfil.passwordConfirmation}"  class="inputcadastro"/>
 
                             </h:panelGrid>
 
                         </fieldset>
 
-                        <h:commandButton value="Salvar Dados" action="#{cadastroPerfil.userRegister()}"/>
+                        <h:commandButton value="Salvar Dados" action="#{cadastroPerfil.userRegister()}" class="buttonSubmit"/>
                     </h:form>
+                    <p class="obrigatorio">* Campos Obrigatórios</p>
                 </section>
             </div>
         </div>

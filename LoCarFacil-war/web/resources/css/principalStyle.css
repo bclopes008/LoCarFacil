@@ -105,6 +105,9 @@ aside .labelStyle{
 	height:30px;
         color:black;
 }
+.ui-inputfield  {  
+ width: 75px !important;
+}
 .horaRetira, .horaDevolucao{
 	color:rgba(0,0,0,0.7);
 }
@@ -126,6 +129,20 @@ hr{
 	height:2px;
 	margin-bottom:10px;
 	margin-top:10px;
+}
+.buttonAluguel{
+    background-color: #0047b3;
+    color:white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+btn btn-primary{
+     background-color: #0047b3;
+    color:white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /*Fim da aside-------------------------------------------------------------------------------------------------------------------*/

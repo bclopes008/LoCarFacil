@@ -14,7 +14,7 @@
         <h:outputStylesheet name="css/rodapeStyle.css" />
         <h:outputScript name="js/bootstrap.min.js" />
     </h:head>
-    <h:body>
+   <h:body>
         <ui:insert>
             <ui:include src="menu.xhtml"/>
         </ui:insert>
@@ -25,21 +25,22 @@
                         <legend>Identificação do Usuário</legend>
                         <h:panelGrid columns="1">
                             <h:outputLabel for="loginCadastro" value="Login"/>
-                            <h:inputText id="loginCadastro" value="#{loginBean.user}"/>
+                            <h:inputText id="loginCadastro" value="#{loginBean.user}" class="inputInde"/>
                             <h:outputLabel for="senhaCadastro" value="Senha"/>
-                            <h:inputSecret id="senhaCadastro" value="#{loginBean.password}"/>
-                            <h:commandButton value="Entrar" action="#{loginBean.loginValidation}"/>
+                            <h:inputSecret id="senhaCadastro" value="#{loginBean.password}" class="inputInde"/>
+                            <h:commandButton value="Entrar" action="#{loginBean.loginValidation}" class="buttonEnviar"/>
                         </h:panelGrid>
-                        <div class="row">
+                        
+                        <div class="row ">
 
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-3 col-sm-3 col-xs-12">
                                 <h:outputLink id="linkRecuperacao" value="">
                                     <h:outputText value="Equeci minha senha"/>
                                 </h:outputLink>
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <a href="cadastroCliente.xhtml" id="linkCadastro">Cadastre-se</a>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <a href="cadastroCliente.xhtml">Cadastre-se</a>
                             </div>
 
                         </div>
@@ -53,5 +54,6 @@
             <ui:include src="rodape.xhtml"/>
         </ui:insert>
     </h:body>
+
 </html>
 
